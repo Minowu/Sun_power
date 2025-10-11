@@ -1,4 +1,5 @@
-import { Zap, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import {Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import logo from '../assets/logo_navbar2.png';
 
 const Footer = () => {
   const quickLinks = [
@@ -17,10 +18,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-gradient-to-br from-teal-500 to-teal-600 p-2 rounded-lg">
-                <Zap className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl font-bold">EcoFlow Energy</span>
+              <img src={logo} alt="logo" className="h-10" />
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
@@ -32,15 +30,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-teal" />
-                <span className="text-gray-300">123 Solar Street, Green City, CA 90210</span>
+                <span className="text-gray-300">C25-C26,28/5 Duong Khue Street, Mai Dich Ward, Cau Giay District, Hanoi, Vietnam</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-teal" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+84 986 249 212</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-teal" />
-                <span className="text-gray-300">info@ecoflowenergy.com</span>
+                <span className="text-gray-300">info@thadosoft.vn</span>
               </div>
             </div>
           </div>

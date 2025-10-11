@@ -1,4 +1,5 @@
 import aboutImage from '../assets/about_hero.jpg';
+import aboutVideo from '../assets/about_hero.mp4';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -82,9 +83,12 @@ const About = () => {
     <section id="about-us" className="h-[200vh] relative">
       {/* Background Image */}
       <div className="top-0 w-screen sticky z-0">
-        <img
-          src={aboutImage}
-          alt="About Thadorobot"
+        <video
+          src={aboutVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="object-cover w-screen h-screen"
         />
       </div>
@@ -95,7 +99,7 @@ const About = () => {
       initial="hidden"
       animate={is_inview_title ? 'visible' : 'hidden'}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -translate-y-30">
           <h3 className="text-teal font-semibold mb-2 text-6xl">About Thadorobot</h3>
           <p className="text-lg text-white/90 leading-relaxed mb-6 max-w-3xl mx-auto">
             Since 2020, Thadorobot has been at the forefront of the renewable energy
@@ -104,7 +108,7 @@ const About = () => {
           </p>
         </div>
       </motion.div>
-      <div className="h-[90vh] relative z-100 flex items-center justify-center text-white">
+      <div className="h-[90vh] relative z-100 flex items-center justify-center text-white -translate-y-50">
         <motion.div
           ref={count_ref}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-40"

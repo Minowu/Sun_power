@@ -37,7 +37,7 @@ const Navbar = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className=" mx-auto px-4 sm:px-6 lg:px-8 2xl:px-50">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-13">
           {/* Logo */}
           <div className="flex items-center">
             <img className="h-9" src={isScrolled || isHovered ? logo2 : logo1} alt="logo" />

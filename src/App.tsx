@@ -3,10 +3,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Solutions from './components/Solution';
+import QualityControl from './components/QualityControll';
 import Products from './components/Product';
 import Projects from './components/Project';
 import News from './components/News';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,11 +15,10 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Solutions />
       <Products />
-      <Projects />
+      <Solutions />
+      <QualityControl />
       <News />
-      <Contact />
       <Footer />
     </div>
   );
