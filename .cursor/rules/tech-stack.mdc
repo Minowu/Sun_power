@@ -1,0 +1,198 @@
+---
+description: Tech stack và version management cho Sun Power React app
+globs: **/*
+alwaysApply: true
+---
+
+# Sun Power Tech Stack & Version Management
+
+## Core Technology Stack
+
+### Frontend Framework
+- **React 19.1.1**: UI framework chính
+- **TypeScript ~5.9.3**: Type safety và development experience
+- **Vite 7.1.7**: Build tool và dev server (thay thế Create React App)
+
+### Styling & UI
+- **Tailwind CSS 4.1.14**: Utility-first CSS framework
+- **@tailwindcss/vite 4.1.14**: Vite plugin cho Tailwind CSS
+- **Framer Motion 12.23.22**: Animation library cho React
+
+### Icons & Assets
+- **Lucide React 0.545.0**: Icon library (thay thế React Icons)
+
+### Development Tools
+- **ESLint 9.36.0**: Code linting
+- **TypeScript ESLint 8.45.0**: TypeScript-specific linting
+- **@vitejs/plugin-react 5.0.4**: React support cho Vite
+
+## Version Management Guidelines
+
+### 1. Core Dependencies (Production)
+```json
+{
+  "react": "^19.1.1",
+  "react-dom": "^19.1.1",
+  "framer-motion": "^12.23.22",
+  "lucide-react": "^0.545.0"
+}
+```
+
+### 2. Build & Styling Dependencies
+```json
+{
+  "@tailwindcss/vite": "^4.1.14",
+  "tailwindcss": "^4.1.14"
+}
+```
+
+### 3. Development Dependencies
+```json
+{
+  "@vitejs/plugin-react": "^5.0.4",
+  "vite": "^7.1.7",
+  "typescript": "~5.9.3",
+  "eslint": "^9.36.0"
+}
+```
+
+## Architecture Patterns
+
+### 1. Component Structure
+- **Page Components**: `src/pages/` - Route-level components
+- **Reusable Components**: `src/components/` - Shared UI components
+- **Page-specific Components**: `src/components/[page]/` - Page-specific components
+
+### 2. File Organization
+```
+src/
+├── pages/           # Route components
+├── components/      # Reusable components
+│   └── home/       # Home page specific components
+├── assets/         # Static assets
+└── main.tsx        # App entry point
+```
+
+### 3. Import Patterns
+```typescript
+// Page imports
+import Home from './pages/Home';
+
+// Component imports
+import Navbar from './components/Navbar';
+import Hero from './components/home/Hero';
+
+// Asset imports
+import heroVideo from './assets/hero_video.mp4';
+```
+
+## Development Guidelines
+
+### 1. Component Creation
+- Sử dụng functional components với TypeScript
+- Implement responsive design với Tailwind CSS
+- Sử dụng Framer Motion cho animations
+
+### 2. Styling Approach
+- Utility-first với Tailwind CSS
+- Custom CSS chỉ khi cần thiết
+- Responsive design với mobile-first approach
+
+### 3. Animation Guidelines
+- Sử dụng Framer Motion cho complex animations
+- CSS transitions cho simple animations
+- Performance-first animation approach
+
+## Version Update Strategy
+
+### 1. Major Updates
+- React: Cẩn thận với breaking changes
+- TypeScript: Test thoroughly với new versions
+- Vite: Usually safe, check plugin compatibility
+
+### 2. Minor Updates
+- Tailwind CSS: Usually safe
+- Framer Motion: Check animation API changes
+- Lucide React: Usually safe
+
+### 3. Patch Updates
+- ESLint: Usually safe
+- Development tools: Generally safe
+
+## Performance Considerations
+
+### 1. Bundle Optimization
+- Vite provides excellent tree-shaking
+- Dynamic imports cho code splitting
+- Optimize images trong `src/assets/`
+
+### 2. Animation Performance
+- Sử dụng `transform` và `opacity` cho animations
+- Avoid animating layout properties
+- Use `will-change` sparingly
+
+### 3. TypeScript Performance
+- Strict mode enabled
+- Proper type definitions
+- Avoid `any` types
+
+## Common Patterns
+
+### 1. Component Pattern
+```typescript
+interface ComponentProps {
+  // Define props với TypeScript
+}
+
+const Component: React.FC<ComponentProps> = ({ prop1, prop2 }) => {
+  return (
+    <div className="tailwind-classes">
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default Component;
+```
+
+### 2. Animation Pattern
+```typescript
+import { motion } from 'framer-motion';
+
+const AnimatedComponent = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      Content
+    </motion.div>
+  );
+};
+```
+
+### 3. Responsive Pattern
+```typescript
+// Mobile-first approach
+<div className="text-sm md:text-base lg:text-lg">
+  Responsive text
+</div>
+```
+
+## Security & Best Practices
+
+### 1. Dependencies
+- Regular security audits với `npm audit`
+- Keep dependencies updated
+- Use exact versions cho critical dependencies
+
+### 2. TypeScript
+- Enable strict mode
+- Use proper type definitions
+- Avoid `any` types
+
+### 3. Performance
+- Lazy load components khi cần
+- Optimize images và assets
+- Use React.memo cho expensive components

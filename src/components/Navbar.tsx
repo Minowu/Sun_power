@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import logo1 from '../assets/logo_navbar1.png';
 import logo2 from '../assets/logo_navbar2.png';
@@ -19,7 +20,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    'Home', 'About Us', 'Solutions', 'Products','Contact'
+    { name: 'Home', path: '/' },
+    { name: 'Products', path: '/products' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Solutions', path: '/solutions' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const toggleLanguage = () => {
@@ -46,15 +51,15 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-12">
             {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
+              <Link
+                key={item.name}
+                to={item.path}
                 className={`btn-nav font-light transition-colors hover:text-teal-500 ${
                   isScrolled || isHovered ? 'text-navy' : 'text-white'
                 }`}
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </nav>
 
@@ -90,14 +95,14 @@ const Navbar = () => {
           <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 p-4 shadow-lg">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
+                <Link
+                  key={item.name}
+                  to={item.path}
                   className="text-navy font-medium hover:text-teal-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </Link>
               ))}
               
               {/* Mobile Language Toggle */}

@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import image1 from '../assets/solution_1.jpg';
-import image2 from '../assets/solution_2.jpg';
-import image3 from '../assets/solution_3.jpg';
-import image4 from '../assets/solution_4.jpg';
-import image5 from '../assets/solution_5.jpg';
-import image6 from '../assets/solution_6.jpg';
-import image7 from '../assets/solution_7.jpg';
-import icon1 from '../assets/icon_solution_1.png';
-import icon2 from '../assets/icon_solution_2.png';
-import icon3 from '../assets/icon_solution_3.png';
+import image1 from '../../assets/solution_1.jpg';
+import image2 from '../../assets/solution_2.jpg';
+import image3 from '../../assets/solution_3.jpg';
+import image4 from '../../assets/solution_4.jpg';
+import image5 from '../../assets/solution_5.jpg';
+import image6 from '../../assets/solution_6.jpg';
+import image7 from '../../assets/solution_7.jpg';
+import icon1 from '../../assets/icon_solution_1.png';
+import icon2 from '../../assets/icon_solution_2.png';
+import icon3 from '../../assets/icon_solution_3.png';
 
 const Solutions = () => {
   const mockData = [

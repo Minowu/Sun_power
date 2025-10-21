@@ -1,8 +1,8 @@
-import backgroundVideo from '../assets/service_home.mp4';
-import icon1 from '../assets/icon_quality_1.png';
-import icon2 from '../assets/icon_quality_2.png';
-import icon3 from '../assets/icon_quality_3.png';
-import icon4 from '../assets/icon_quality_4.png';
+import backgroundVideo from '../../assets/Service_home.mp4';
+import icon1 from '../../assets/icon_quality_1.png';
+import icon2 from '../../assets/icon_quality_2.png';
+import icon3 from '../../assets/icon_quality_3.png';
+import icon4 from '../../assets/icon_quality_4.png';
 
 const componentData = {
   buttonText: 'Learn More',

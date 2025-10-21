@@ -1,5 +1,5 @@
-import aboutImage from '../assets/about_hero.jpg';
-import aboutVideo from '../assets/about_hero.mp4';
+import React from 'react';
+import aboutVideo from '../../assets/about_hero.mp4';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -57,7 +57,6 @@ const About = () => {
         }, 50);
       });
 
-      // Dọn dẹp intervals khi component unmount hoặc is_inview thay đổi
       return () => {
         intervals.forEach((interval) => clearInterval(interval));
       };
@@ -65,7 +64,7 @@ const About = () => {
       // Đặt lại về 0 khi ra khỏi khung nhìn
       setCounts(stats.map(() => 0));
     }
-  }, [is_inview, stats]);
+  }, [is_inview]);
 
   const count_animate = {
     hidden: {

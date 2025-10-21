@@ -1,6 +1,6 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { motion } from 'framer-motion';
-import heroVideo from '../assets/hero_video.mp4';
+import heroVideo from '../../assets/hero_video.mp4';
 
 const Hero = () => {
 

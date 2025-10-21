@@ -1,0 +1,116 @@
+---
+description: Cấu trúc thư mục và file quan trọng của dự án Sun Power React/TypeScript
+globs: **/*
+alwaysApply: true
+---
+
+# Cấu Trúc Dự Án Sun Power
+
+## Tổng Quan
+Dự án Sun Power là một ứng dụng web React/TypeScript sử dụng Vite làm build tool và Tailwind CSS cho styling.
+
+## Cấu Trúc Thư Mục Chính
+
+### Root Directory
+```
+Sun_power/
+├── .cursor/                    # Cursor IDE rules và config
+├── node_modules/               # Dependencies
+├── public/                     # Static assets
+├── src/                        # Source code chính
+├── package.json               # Dependencies và scripts
+├── vite.config.ts             # Vite configuration
+├── tsconfig.json              # TypeScript config
+└── index.html                 # Entry HTML file
+```
+
+### Source Code (`src/`)
+```
+src/
+├── main.tsx                   # Entry point của ứng dụng
+├── App.tsx                    # Root component
+├── App.css                    # Global styles
+├── index.css                  # Base styles
+├── assets/                    # Static assets (images, videos)
+├── components/                # React components
+├── pages/                     # Page components
+└── ...
+```
+
+### Components (`src/components/`)
+```
+components/
+├── Navbar.tsx                 # Navigation bar
+├── Footer.tsx                 # Footer component
+├── Contact.tsx                # Contact form/page
+├── News.tsx                   # News section
+├── Product.tsx                # Product showcase
+├── home/                      # Home page specific components
+│   ├── Hero.tsx              # Hero section
+│   ├── About.tsx             # About section
+│   ├── Solution.tsx          # Solutions showcase
+│   ├── Project.tsx           # Projects showcase
+│   ├── QualityControll.tsx   # Quality control section
+│   └── CTA.tsx               # Call-to-action section
+└── ...
+```
+
+### Assets (`src/assets/`)
+```
+assets/
+├── logo_navbar1.png          # Logo cho navbar
+├── logo_navbar2.png          # Logo alternative
+├── hero_video.mp4            # Video hero section
+├── about_hero.jpg            # About section image
+├── about_hero.mp4            # About section video
+├── Service_home.mp4          # Service video
+├── CTA.png                   # Call-to-action image
+├── icon_quality_*.png        # Quality icons (1-4)
+├── icon_solution_*.png       # Solution icons (1-3)
+├── solution_*.jpg            # Solution images (1-7)
+└── react.svg                 # React logo
+```
+
+## File Quan Trọng
+
+### Configuration Files
+- `package.json` - Dependencies và scripts
+- `vite.config.ts` - Vite build configuration
+- `tsconfig.json` - TypeScript configuration
+- `eslint.config.js` - ESLint rules
+
+### Entry Points
+- `index.html` - HTML entry point
+- `src/main.tsx` - React entry point
+- `src/App.tsx` - Root React component
+
+### Page Components
+- `src/pages/Home.tsx` - Trang chủ chính
+
+### Key Components
+- `src/components/Navbar.tsx` - Navigation
+- `src/components/home/Hero.tsx` - Hero section
+- `src/components/home/About.tsx` - About section
+- `src/components/home/Solution.tsx` - Solutions
+- `src/components/home/Project.tsx` - Projects
+- `src/components/home/QualityControll.tsx` - Quality control
+- `src/components/home/CTA.tsx` - Call-to-action
+- `src/components/Contact.tsx` - Contact form
+- `src/components/Footer.tsx` - Footer
+
+## Quy Tắc Phát Triển
+
+1. **Components**: Đặt trong `src/components/`
+2. **Pages**: Đặt trong `src/pages/`
+3. **Assets**: Đặt trong `src/assets/`
+4. **Home-specific components**: Đặt trong `src/components/home/`
+5. **Styling**: Sử dụng Tailwind CSS classes
+6. **TypeScript**: Sử dụng TypeScript cho type safety
+
+## Cách Mở Các Trang Mới
+
+Khi cần tạo trang mới:
+1. Tạo component trong `src/pages/`
+2. Thêm route trong `src/App.tsx`
+3. Tạo components liên quan trong `src/components/`
+4. Thêm assets cần thiết vào `src/assets/`

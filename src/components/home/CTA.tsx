@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import CTAImage from '../assets/CTA.png';
+import CTAImage from '../../assets/CTA.png';
 
 const CallToAction = () => {
   return (
