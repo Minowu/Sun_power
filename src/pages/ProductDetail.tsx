@@ -53,8 +53,6 @@ const ProductDetail = () => {
         detailContent={currentProduct.details.content}
         detailImageDescription={currentProduct.details.imageDescription}
         detailImage={currentProduct.images[0]}
-        technicalModels={currentProduct.technical.models}
-        technicalGroups={currentProduct.technical.groups}
       />
 
       {/* CTA Section */}

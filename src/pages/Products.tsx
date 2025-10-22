@@ -113,7 +113,7 @@ const Products = () => {
 
           <div className="mt-5 w-full h-0.5 bg-black"></div>
           {/* Product Grid - Main Area (Gray) */}
-          <div className="col-span-3 row-start-2 grid grid-cols-3 gap-6">
+          <div className="col-span-3 row-start-2 grid grid-cols-3 gap-4">
               {filteredProducts.map((product, index) => (
                 <motion.div
                   key={product.id}
@@ -126,38 +126,32 @@ const Products = () => {
                       to={`/products/${product.id}`}
                       className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
                     >
-                      <div className="p-6">
+                      <div className="p-6 h-[400px]">
                         <div className="text-center">
                           <div className="h-48 flex items-center justify-center mb-4">
                             <img 
                               src={product.image} 
                               alt={product.name} 
-                              className="h-40 w-auto object-contain"
+                              className="h-40 w-auto object-contain img-hover"
                             />
                           </div>
                           <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
                             {currentCategory?.name}
                           </div>
-                          <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                          <h3 className="text-lg font-bold text-gray-900 mb-2">{product.name}</h3>
                           <p className="text-gray-600 text-sm">{product.description}</p>
-                          <div className="mt-4 text-teal-500 font-semibold flex items-center justify-center gap-2">
-                            Xem chi tiết
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </div>
                         </div>
                       </div>
                     </Link>
                   ) : (
-                    <div className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div className="block bg-white rounded-lg shadow-lg overflow-hidden">
                       <div className="p-6">
                         <div className="text-center">
                           <div className="h-48 flex items-center justify-center mb-4">
                             <img 
                               src={product.image} 
                               alt={product.name} 
-                              className="h-40 w-auto object-contain"
+                              className="h-40 w-auto object-contain img-hover"
                             />
                           </div>
                           <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">

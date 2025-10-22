@@ -45,15 +45,6 @@ export interface Product {
   slug?: string;
 }
 
-export interface TechnicalParameter {
-  name: string;
-  values: string[];
-}
-
-export interface TechnicalGroup {
-  groupName: string;
-  parameters: TechnicalParameter[];
-}
 
 export interface ProductDetail {
   id: string;
@@ -68,10 +59,6 @@ export interface ProductDetail {
   details: {
     content: string;
     imageDescription: string;
-  };
-  technical: {
-    models: string[];
-    groups: TechnicalGroup[];
   };
 }
 
@@ -347,58 +334,6 @@ const createProductDetail = (product: Product): ProductDetail => ({
   details: {
     content: `${product.name} sử dụng công nghệ hiện đại nhất trong ngành năng lượng mặt trời. Sản phẩm được thiết kế với các tính năng bảo vệ tiên tiến và hệ thống giám sát thông minh, đảm bảo hoạt động ổn định và hiệu quả trong mọi điều kiện môi trường.`,
     imageDescription: 'Hình ảnh minh họa sản phẩm và các tính năng chính'
-  },
-  technical: {
-    models: [product.name],
-    groups: [
-      {
-        groupName: 'Thông số cơ bản',
-        parameters: [
-          {
-            name: 'Công suất định mức',
-            values: ['15kW', '17kW', '20kW', '25kW']
-          },
-          {
-            name: 'Điện áp đầu vào',
-            values: ['200-800V', '200-800V', '200-800V', '200-800V']
-          },
-          {
-            name: 'Điện áp đầu ra',
-            values: ['380V/400V', '380V/400V', '380V/400V', '380V/400V']
-          }
-        ]
-      },
-      {
-        groupName: 'Hiệu suất',
-        parameters: [
-          {
-            name: 'Hiệu suất tối đa',
-            values: ['98.8%', '98.8%', '98.8%', '98.8%']
-          },
-          {
-            name: 'Hiệu suất châu Âu',
-            values: ['98.3%', '98.3%', '98.4%', '98.4%']
-          }
-        ]
-      },
-      {
-        groupName: 'Bảo vệ',
-        parameters: [
-          {
-            name: 'Bảo vệ ngược DC',
-            values: ['Yes', 'Yes', 'Yes', 'Yes']
-          },
-          {
-            name: 'Bảo vệ ngắn mạch AC',
-            values: ['Yes', 'Yes', 'Yes', 'Yes']
-          },
-          {
-            name: 'Giám sát cách điện',
-            values: ['Yes', 'Yes', 'Yes', 'Yes']
-          }
-        ]
-      }
-    ]
   }
 });
 

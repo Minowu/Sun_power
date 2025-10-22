@@ -37,6 +37,11 @@ footer {
   .btn-nav:hover::after {
     @apply w-full;
   }
+
+  /* Class chung cho hiệu ứng hover image */
+  .img-hover {
+    @apply hover:scale-120 transition-all duration-300;
+  }
 }
 }
 /* Animations */

@@ -27,6 +27,7 @@ export interface SolutionFeature {
 export interface Solution {
   id: number;
   slug: string;
+  category: 'residential' | 'ci' | 'utility';
   overview: SolutionOverview;
   schema: SolutionSchema;
   feature1: SolutionFeature;
@@ -38,6 +39,7 @@ export const solutionsData: Solution[] = [
   {
     id: 1,
     slug: "residential-string-inverter-pv-solution",
+    category: "residential",
     overview: {
       title: "Residential String Inverter PV Solution",
       image: solution1
@@ -68,6 +70,7 @@ export const solutionsData: Solution[] = [
   {
     id: 2,
     slug: "residential-ess-solution",
+    category: "residential",
     overview: {
       title: "Residential ESS Solution",
       image: solution2
@@ -98,6 +101,7 @@ export const solutionsData: Solution[] = [
   {
     id: 3,
     slug: "microinverter-solution",
+    category: "residential",
     overview: {
       title: "Microinverter Solution",
       image: solution3
@@ -128,6 +132,7 @@ export const solutionsData: Solution[] = [
   {
     id: 4,
     slug: "ci-pv-solution",
+    category: "ci",
     overview: {
       title: "C&I PV Solution",
       image: solution4
@@ -158,6 +163,7 @@ export const solutionsData: Solution[] = [
   {
     id: 5,
     slug: "ci-ess-solution",
+    category: "ci",
     overview: {
       title: "C&I ESS Solution",
       image: solution5
@@ -188,6 +194,7 @@ export const solutionsData: Solution[] = [
   {
     id: 6,
     slug: "utility-pv-system",
+    category: "utility",
     overview: {
       title: "Utility PV System",
       image: solution6
@@ -218,6 +225,7 @@ export const solutionsData: Solution[] = [
   {
     id: 7,
     slug: "utility-ess-solution",
+    category: "utility",
     overview: {
       title: "Utility ESS Solution",
       image: solution7

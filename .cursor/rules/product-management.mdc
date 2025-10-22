@@ -1,0 +1,100 @@
+---
+description: Quản lý sản phẩm và tạo field mới cho products.ts
+globs: src/data/products.ts
+alwaysApply: true
+---
+
+# Product Management Rules
+
+## Nhớ và quản lý sản phẩm từ products.ts
+
+Khi làm việc với file `src/data/products.ts`, hãy tuân theo các quy tắc sau:
+
+### 1. Cấu trúc sản phẩm hiện tại
+- **Product interface**: id, name, description, image, category, subCategory, slug?
+- **ProductDetail interface**: id, slug, name, images, overview, details, technical
+- **Categories**: inverter, energy_storage, accessories, smart_energy_platform
+
+### 2. Khi tạo field mới cho Product interface:
+
+```typescript
+// Ví dụ thêm field mới
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  category: string;
+  subCategory: string;
+  slug?: string;
+  // Thêm field mới ở đây
+  price?: number;           // Giá sản phẩm
+  availability?: boolean;   // Tình trạng có sẵn
+  rating?: number;         // Đánh giá (1-5)
+  tags?: string[];         // Tags phân loại
+  specifications?: {       // Thông số kỹ thuật cơ bản
+    power?: string;
+    voltage?: string;
+    efficiency?: string;
+  };
+}
+```
+
+### 3. Khi thêm sản phẩm mới:
+
+```typescript
+// Luôn import image trước
+import newProductImg from '../assets/products/category/subcategory/product.png';
+
+// Thêm vào mảng products
+{
+  id: 'unique-product-id',
+  name: 'Product Name',
+  description: 'Mô tả ngắn gọn',
+  image: newProductImg,
+  category: 'category_name',
+  subCategory: 'subcategory_name',
+  // Các field mới nếu có
+  price: 1000000,
+  availability: true,
+  rating: 4.5,
+  tags: ['tag1', 'tag2']
+}
+```
+
+### 4. Cập nhật createProductDetail function:
+
+Khi thêm field mới vào Product interface, cần cập nhật function `createProductDetail` để xử lý field mới:
+
+```typescript
+const createProductDetail = (product: Product): ProductDetail => ({
+  id: product.id,
+  slug: product.id,
+  name: product.name,
+  images: [product.image],
+  // Xử lý field mới nếu cần
+  ...(product.price && { price: product.price }),
+  ...(product.availability && { availability: product.availability }),
+  // ... các field khác
+});
+```
+
+### 5. Categories và SubCategories:
+
+**Inverter**: hybrid, microinverter, string
+**Energy Storage**: batteries, all_in_one, ci_ess, container  
+**Accessories**: controllers, loggers, communication
+**Smart Platform**: cloud_platform
+
+### 6. Quy tắc đặt tên:
+- ID: lowercase với dấu gạch ngang (kebab-case)
+- Name: Viết hoa chữ cái đầu, có thể có số và dấu gạch ngang
+- Description: Tiếng Việt, ngắn gọn, mô tả chức năng chính
+- Image path: theo cấu trúc thư mục sản phẩm
+
+### 7. Khi được yêu cầu tạo field mới:
+1. Xác định field cần thiết
+2. Cập nhật interface Product
+3. Cập nhật tất cả sản phẩm hiện có (nếu cần)
+4. Cập nhật createProductDetail function
+5. Đảm bảo type safety
