@@ -3,6 +3,7 @@ import hybridHs1Img from '../assets/products/inverter/hybrid_inverter/hybrid-hs1
 import h38kHsImg from '../assets/products/inverter/hybrid_inverter/h38k-hs.png';
 import h512kHtImg from '../assets/products/inverter/hybrid_inverter/h512k-ht.png';
 import h1525kHtImg from '../assets/products/inverter/hybrid_inverter/h1525k-ht.png';
+import h50k from '../assets/products/inverter/hybrid_inverter/h50k.png';
 
 import m300500sSwImg from '../assets/products/inverter/microinverter/m300-500s-sw.png';
 import m6001000sSwImg from '../assets/products/inverter/microinverter/m600-1000s-sw.png';
@@ -41,6 +42,37 @@ export interface Product {
   image: string;
   category: string;
   subCategory: string;
+  slug?: string;
+}
+
+export interface TechnicalParameter {
+  name: string;
+  values: string[];
+}
+
+export interface TechnicalGroup {
+  groupName: string;
+  parameters: TechnicalParameter[];
+}
+
+export interface ProductDetail {
+  id: string;
+  slug: string;
+  name: string;
+  images: string[];
+  overview: {
+    summary: string;
+    keyFeatures: string[];
+    datasheetLink: string;
+  };
+  details: {
+    content: string;
+    imageDescription: string;
+  };
+  technical: {
+    models: string[];
+    groups: TechnicalGroup[];
+  };
 }
 
 export interface Category {
@@ -75,89 +107,97 @@ export const categories: Category[] = [
 export const products: Product[] = [
   // Inverter products
   {
-    id: 'hybrid-hs1',
-    name: 'Hybrid HS1',
-    description: 'Biến tần hybrid 1 pha tích hợp pin lưu trữ với công nghệ tiên tiến, quản lý thông minh và hiệu suất cao',
+    id: 'h3k-3k6-5k-6k-hs1',
+    name: 'H3K/3K6/5K/6K-HS1',
+    description: 'Single-Phase Hybrid Inverter',
     image: hybridHs1Img,
     category: 'inverter',
     subCategory: 'hybrid'
   },
   {
-    id: 'h38k-hs',
-    name: 'H38K-HS',
-    description: 'Biến tần hybrid 38kW cho hệ thống thương mại với công suất cao, độ bền cao và dễ lắp đặt',
+    id: 'h3k-3k6-4k-4k6-5k-6k-8k-hs',
+    name: 'H3K/3K6/4K/4K6/5K/6K/8K-HS',
+    description: 'Single-Phase Hybrid Inverter',
     image: h38kHsImg,
     category: 'inverter',
     subCategory: 'hybrid'
   },
   {
-    id: 'h512k-ht',
-    name: 'H512K-HT',
-    description: 'Biến tần hybrid 512kW cho hệ thống công nghiệp với công suất lớn, hiệu suất cao và bảo hành dài hạn',
+    id: 'h5k-6k-8k-10k-12k-ht',
+    name: 'H5K/6K/8K/10K/12K-HT',
+    description: 'Three-Phase Hybrid Inverter',
     image: h512kHtImg,
     category: 'inverter',
     subCategory: 'hybrid'
   },
   {
-    id: 'h1525k-ht',
-    name: 'H1525K-HT',
-    description: 'Biến tần hybrid 1.525MW cho hệ thống quy mô lớn với công suất cực lớn, hiệu suất tối ưu và độ tin cậy cao',
+    id: 'h15k-20k-25k-ht',
+    name: 'H15K/20K/25K-HT',
+    description: 'Three-Phase Hybrid Inverter',
     image: h1525kHtImg,
     category: 'inverter',
     subCategory: 'hybrid'
   },
   {
-    id: 'm300-500s-sw',
-    name: 'M300-500S-SW',
-    description: 'Microinverter 300-500W cho từng tấm pin với hiệu suất cao, dễ bảo trì và an toàn',
+    id: 'h50k-75k-80k-99k9-100k-110k-125k-et',
+    name: 'H50K/75K/80K/99K9/100K/110K/125K-ET',
+    description: 'Hybrid Inverter',
+    image: h50k,
+    category: 'inverter',
+    subCategory: 'hybrid'
+  },
+  {
+    id: 'm300-400-500-s-sw',
+    name: 'M300-400-500-S-SW',
+    description: '1-in-1 Microinverter',
     image: m300500sSwImg,
     category: 'inverter',
     subCategory: 'microinverter'
   },
   {
-    id: 'm600-1000s-sw',
-    name: 'M600-1000S-SW',
-    description: 'Microinverter 600-1000W cho tấm pin công suất cao với hiệu suất tối ưu và độ bền bỉ',
+    id: 'm600-700-800-900-1000-s-sw',
+    name: 'M600-700-800-900-1000-S-SW',
+    description: '2-in-1 Microinverter',
     image: m6001000sSwImg,
     category: 'inverter',
     subCategory: 'microinverter'
   },
   {
-    id: 'm1600-2000s-sw',
-    name: 'M1600-2000S-SW',
-    description: 'Microinverter 1.6-2kW cho hệ thống công nghiệp với công suất lớn, hiệu suất cao và độ tin cậy',
+    id: 'm1600-1800-2000-s-sw',
+    name: 'M1600-1800-2000-S-SW',
+    description: '4-in-1 Microinverter',
     image: m16002000sSwImg,
     category: 'inverter',
     subCategory: 'microinverter'
   },
   {
-    id: 's2k-6k-s1',
-    name: 'S2K-6K-S1',
-    description: 'String inverter 2-6kW cho hệ thống dân dụng với tiết kiệm chi phí, dễ lắp đặt và hiệu suất cao',
+    id: 's2k-3k-3k3-3k6-4k-4k6-5k-6k-s1',
+    name: 'S2K/3K/3K3/3K6/4K/4K6/5K/6K-S1',
+    description: 'Single-Phase String Inverter for India',
     image: s2k6kS1Img,
     category: 'inverter',
     subCategory: 'string'
   },
   {
-    id: 's36k-s',
-    name: 'S36K-S',
-    description: 'String inverter 36kW cho hệ thống thương mại với công suất cao, hiệu suất tối ưu và độ bền bỉ',
+    id: 's3k-3k6-4k-4k6-5k-6k-7k5-s',
+    name: 'S3K/3K6/4K/4K6/5K/6K/7K5-S',
+    description: 'Single-Phase String Inverter',
     image: s36kSImg,
     category: 'inverter',
     subCategory: 'string'
   },
   {
-    id: 's712k-s',
-    name: 'S712K-S',
-    description: 'String inverter 712kW cho hệ thống công nghiệp với công suất lớn, hiệu suất cao và độ tin cậy',
+    id: 's7k-8k-9k-10k-12k-s',
+    name: 'S7K/8K/9K/10K/12K-S',
+    description: 'Single-Phase String Inverter',
     image: s712kSImg,
     category: 'inverter',
     subCategory: 'string'
   },
   {
-    id: 's812k-t',
-    name: 'S812K-T',
-    description: 'String inverter 812kW cho hệ thống quy mô lớn với công suất cực lớn, hiệu suất tối ưu và bảo hành dài hạn',
+    id: 's8k-10k-12k-t',
+    name: 'S8K/10K/12K-T',
+    description: 'Three-Phase String Inverter',
     image: s812kTImg,
     category: 'inverter',
     subCategory: 'string'
@@ -166,55 +206,55 @@ export const products: Product[] = [
   {
     id: 'ms-2500',
     name: 'MS-2500',
-    description: 'Pin lưu trữ lithium-ion 2.5kWh với dung lượng cao, tuổi thọ dài và độ an toàn tuyệt đối',
+    description: 'Balcony Mirco Storage System',
     image: ms2500Img,
     category: 'energy_storage',
     subCategory: 'batteries'
   },
   {
-    id: 'e100-h3',
-    name: 'E100-H3',
-    description: 'Pin lưu trữ lithium-ion 100kWh với dung lượng lớn, hiệu suất cao và độ bền bỉ',
+    id: 'e50-100-h3',
+    name: 'E50/100-H3',
+    description: 'High Voltage Battery',
     image: e100H3Img,
     category: 'energy_storage',
     subCategory: 'batteries'
   },
   {
-    id: 'battery-h',
-    name: 'Battery H',
-    description: 'Pin lưu trữ lithium-ion công nghệ cao với công nghệ tiên tiến, hiệu suất cao và độ an toàn',
+    id: 'e50-100-150-200-250-300-400-500-h2',
+    name: 'E50/100/150/200/250/300/400/500-H2',
+    description: 'High Voltage Energy Storage Battery Pack',
     image: batteryHImg,
     category: 'energy_storage',
     subCategory: 'batteries'
   },
   {
-    id: 'battery-h2',
-    name: 'Battery H2',
-    description: 'Pin lưu trữ lithium-ion thế hệ mới với hiệu suất tối ưu và tuổi thọ dài',
+    id: 'e50-100-150-200-h',
+    name: 'E50/100/150/200-H',
+    description: 'High Voltage Energy Storage Battery Pack',
     image: batteryH2Img,
     category: 'energy_storage',
     subCategory: 'batteries'
   },
   {
-    id: 'h6k-hta',
-    name: 'H6K-HTA',
-    description: 'Hệ thống lưu trữ tích hợp 6kW với tích hợp hoàn chỉnh, dễ lắp đặt và hiệu suất cao',
+    id: 'h6k-9k-12k-15k-hta',
+    name: 'H6K/9K/12K/15K-HTA',
+    description: 'All-in-one',
     image: h6kHtaImg,
     category: 'energy_storage',
     subCategory: 'all_in_one'
   },
   {
-    id: 'ci-ess-125kw',
-    name: 'CI-ESS-125KW',
-    description: 'Hệ thống lưu trữ thương mại 125kW với công suất cao, hiệu suất tối ưu và độ tin cậy',
+    id: '50-125kw-215kwh',
+    name: '50-125KW/215KWH',
+    description: 'Hybrid ESS Cabinet',
     image: ciEss125kwImg,
     category: 'energy_storage',
     subCategory: 'ci_ess'
   },
   {
-    id: 'ef215p2-ms',
-    name: 'EF215P2-MS',
-    description: 'Hệ thống lưu trữ công nghiệp 215kW với công suất lớn, hiệu suất cao và độ bền bỉ',
+    id: 'ef215p2-m-ms',
+    name: 'EF215P2-M(MS)',
+    description: 'Air Cooling ESS',
     image: ef215p2MsImg,
     category: 'energy_storage',
     subCategory: 'ci_ess'
@@ -222,23 +262,23 @@ export const products: Product[] = [
   {
     id: 'ef215p2-s',
     name: 'EF215P2-S',
-    description: 'Hệ thống lưu trữ công nghiệp 215kW với công suất lớn, hiệu suất cao và độ tin cậy',
+    description: 'Air Cooling ESS',
     image: ef215p2SImg,
     category: 'energy_storage',
     subCategory: 'ci_ess'
   },
   {
     id: 'el372-418p2-dc',
-    name: 'EL372-418P2-DC',
-    description: 'Hệ thống lưu trữ container 372-418kW với công suất cực lớn, hiệu suất tối ưu và bảo hành dài hạn',
+    name: 'EL372/418P2-DC',
+    description: 'Liquid Cooling ESS',
     image: el372418p2DcImg,
     category: 'energy_storage',
-    subCategory: 'container'
+    subCategory: 'ci_ess'
   },
-  {
-    id: 'el3000-5000p2-dc',
-    name: 'EL3000-5000P2-DC',
-    description: 'Hệ thống lưu trữ container 3-5MW với công suất cực lớn, hiệu suất tối ưu và độ tin cậy cao',
+    {
+    id: 'el3000-4000-5000p2-dc',
+    name: 'EL3000/4000/5000P2-DC',
+    description: 'DC ESS',
     image: el30005000p2DcImg,
     category: 'energy_storage',
     subCategory: 'container'
@@ -286,3 +326,81 @@ export const products: Product[] = [
     subCategory: 'cloud_platform'
   }
 ];
+
+// Helper function to create product detail from product
+const createProductDetail = (product: Product): ProductDetail => ({
+  id: product.id,
+  slug: product.id, // Use id as slug temporarily
+  name: product.name,
+  images: [product.image],
+  overview: {
+    summary: `${product.name} là sản phẩm ${product.description.toLowerCase()} chất lượng cao, được thiết kế để đáp ứng nhu cầu năng lượng mặt trời hiện đại. Với công nghệ tiên tiến và hiệu suất vượt trội, sản phẩm mang lại giải pháp tối ưu cho các ứng dụng thương mại và công nghiệp.`,
+    keyFeatures: [
+      'Hiệu suất cao với công nghệ tiên tiến',
+      'Thiết kế bền vững, tuổi thọ lâu dài',
+      'Bảo vệ toàn diện và an toàn tuyệt đối',
+      'Giám sát thông minh 24/7',
+      'Dễ dàng lắp đặt và bảo trì'
+    ],
+    datasheetLink: 'https://www.sunpower-tech.com/datasheet/' + product.id + '.pdf'
+  },
+  details: {
+    content: `${product.name} sử dụng công nghệ hiện đại nhất trong ngành năng lượng mặt trời. Sản phẩm được thiết kế với các tính năng bảo vệ tiên tiến và hệ thống giám sát thông minh, đảm bảo hoạt động ổn định và hiệu quả trong mọi điều kiện môi trường.`,
+    imageDescription: 'Hình ảnh minh họa sản phẩm và các tính năng chính'
+  },
+  technical: {
+    models: [product.name],
+    groups: [
+      {
+        groupName: 'Thông số cơ bản',
+        parameters: [
+          {
+            name: 'Công suất định mức',
+            values: ['15kW', '17kW', '20kW', '25kW']
+          },
+          {
+            name: 'Điện áp đầu vào',
+            values: ['200-800V', '200-800V', '200-800V', '200-800V']
+          },
+          {
+            name: 'Điện áp đầu ra',
+            values: ['380V/400V', '380V/400V', '380V/400V', '380V/400V']
+          }
+        ]
+      },
+      {
+        groupName: 'Hiệu suất',
+        parameters: [
+          {
+            name: 'Hiệu suất tối đa',
+            values: ['98.8%', '98.8%', '98.8%', '98.8%']
+          },
+          {
+            name: 'Hiệu suất châu Âu',
+            values: ['98.3%', '98.3%', '98.4%', '98.4%']
+          }
+        ]
+      },
+      {
+        groupName: 'Bảo vệ',
+        parameters: [
+          {
+            name: 'Bảo vệ ngược DC',
+            values: ['Yes', 'Yes', 'Yes', 'Yes']
+          },
+          {
+            name: 'Bảo vệ ngắn mạch AC',
+            values: ['Yes', 'Yes', 'Yes', 'Yes']
+          },
+          {
+            name: 'Giám sát cách điện',
+            values: ['Yes', 'Yes', 'Yes', 'Yes']
+          }
+        ]
+      }
+    ]
+  }
+});
+
+// Detailed product data - Generate for all products
+export const productDetails: ProductDetail[] = products.map(createProductDetail);

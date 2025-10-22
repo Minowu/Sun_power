@@ -19,8 +19,12 @@ Sun_power/
 ├── public/                     # Static assets
 ├── src/                        # Source code chính
 ├── package.json               # Dependencies và scripts
+├── package-lock.json          # Lock file cho dependencies
 ├── vite.config.ts             # Vite configuration
 ├── tsconfig.json              # TypeScript config
+├── tsconfig.app.json          # TypeScript config cho app
+├── tsconfig.node.json         # TypeScript config cho Node.js
+├── eslint.config.js           # ESLint configuration
 └── index.html                 # Entry HTML file
 ```
 
@@ -34,6 +38,7 @@ src/
 ├── assets/                    # Static assets (images, videos)
 ├── components/                # React components
 ├── pages/                     # Page components
+├── data/                      # Data files và constants
 └── ...
 ```
 
@@ -45,6 +50,7 @@ components/
 ├── Contact.tsx                # Contact form/page
 ├── News.tsx                   # News section
 ├── Product.tsx                # Product showcase
+├── PageHero.tsx               # Page hero component
 ├── home/                      # Home page specific components
 │   ├── Hero.tsx              # Hero section
 │   ├── About.tsx             # About section
@@ -52,6 +58,10 @@ components/
 │   ├── Project.tsx           # Projects showcase
 │   ├── QualityControll.tsx   # Quality control section
 │   └── CTA.tsx               # Call-to-action section
+├── solution/                  # Solution page specific components
+│   ├── FeatureBlock.tsx      # Feature block component
+│   ├── SchemaFramework.tsx   # Schema framework component
+│   └── SolutionOverview.tsx  # Solution overview component
 └── ...
 ```
 
@@ -65,18 +75,35 @@ assets/
 ├── about_hero.mp4            # About section video
 ├── Service_home.mp4          # Service video
 ├── CTA.png                   # Call-to-action image
-├── icon_quality_*.png        # Quality icons (1-4)
+├── favicon.png               # Website favicon
+├── icon_quality_*.png         # Quality icons (1-4)
 ├── icon_solution_*.png       # Solution icons (1-3)
 ├── solution_*.jpg            # Solution images (1-7)
-└── react.svg                 # React logo
+├── react.svg                 # React logo
+├── products/                 # Product images organized by category
+│   ├── accessories/          # Accessory product images
+│   ├── energy_storage/       # Energy storage product images
+│   │   ├── all_in_one_ess/   # All-in-one ESS images
+│   │   ├── batteries/        # Battery images
+│   │   ├── ci_ess/          # CI ESS images
+│   │   └── container_ess/    # Container ESS images
+│   ├── inverter/            # Inverter product images
+│   │   ├── hybrid_inverter/ # Hybrid inverter images
+│   │   ├── microinverter/   # Microinverter images
+│   │   └── string_inverter/ # String inverter images
+│   └── smart_energy_platform/ # Smart energy platform images
+└── ...
 ```
 
 ## File Quan Trọng
 
 ### Configuration Files
 - `package.json` - Dependencies và scripts
+- `package-lock.json` - Lock file cho dependencies
 - `vite.config.ts` - Vite build configuration
-- `tsconfig.json` - TypeScript configuration
+- `tsconfig.json` - TypeScript configuration chính
+- `tsconfig.app.json` - TypeScript config cho app
+- `tsconfig.node.json` - TypeScript config cho Node.js
 - `eslint.config.js` - ESLint rules
 
 ### Entry Points
@@ -86,26 +113,42 @@ assets/
 
 ### Page Components
 - `src/pages/Home.tsx` - Trang chủ chính
+- `src/pages/About.tsx` - Trang giới thiệu
+- `src/pages/Contact.tsx` - Trang liên hệ
+- `src/pages/Products.tsx` - Trang sản phẩm
+- `src/pages/Solutions.tsx` - Trang giải pháp
 
 ### Key Components
 - `src/components/Navbar.tsx` - Navigation
+- `src/components/Footer.tsx` - Footer
+- `src/components/Contact.tsx` - Contact form
+- `src/components/News.tsx` - News section
+- `src/components/Product.tsx` - Product showcase
+- `src/components/PageHero.tsx` - Page hero component
 - `src/components/home/Hero.tsx` - Hero section
 - `src/components/home/About.tsx` - About section
 - `src/components/home/Solution.tsx` - Solutions
 - `src/components/home/Project.tsx` - Projects
 - `src/components/home/QualityControll.tsx` - Quality control
 - `src/components/home/CTA.tsx` - Call-to-action
-- `src/components/Contact.tsx` - Contact form
-- `src/components/Footer.tsx` - Footer
+- `src/components/solution/FeatureBlock.tsx` - Feature block
+- `src/components/solution/SchemaFramework.tsx` - Schema framework
+- `src/components/solution/SolutionOverview.tsx` - Solution overview
+
+### Data Files
+- `src/data/products.ts` - Product data và constants
 
 ## Quy Tắc Phát Triển
 
 1. **Components**: Đặt trong `src/components/`
 2. **Pages**: Đặt trong `src/pages/`
 3. **Assets**: Đặt trong `src/assets/`
-4. **Home-specific components**: Đặt trong `src/components/home/`
-5. **Styling**: Sử dụng Tailwind CSS classes
-6. **TypeScript**: Sử dụng TypeScript cho type safety
+4. **Data**: Đặt trong `src/data/`
+5. **Home-specific components**: Đặt trong `src/components/home/`
+6. **Solution-specific components**: Đặt trong `src/components/solution/`
+7. **Product images**: Tổ chức theo category trong `src/assets/products/`
+8. **Styling**: Sử dụng Tailwind CSS classes
+9. **TypeScript**: Sử dụng TypeScript cho type safety
 
 ## Cách Mở Các Trang Mới
 
@@ -113,4 +156,6 @@ Khi cần tạo trang mới:
 1. Tạo component trong `src/pages/`
 2. Thêm route trong `src/App.tsx`
 3. Tạo components liên quan trong `src/components/`
-4. Thêm assets cần thiết vào `src/assets/`
+4. Tạo page-specific components trong `src/components/[page]/` nếu cần
+5. Thêm assets cần thiết vào `src/assets/`
+6. Thêm data constants vào `src/data/` nếu cần

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import aboutHero from '../assets/about_hero.jpg';
 import { products, categories } from '../data/products';
@@ -119,24 +120,55 @@ const Products = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="p-6">
-                    <div className="text-center">
-                      <div className="h-48 flex items-center justify-center mb-4">
-                        <img 
-                          src={product.image} 
-                          alt={product.name} 
-                          className="h-40 w-auto object-contain"
-                        />
+                  {product.id ? (
+                    <Link
+                      to={`/products/${product.id}`}
+                      className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+                    >
+                      <div className="p-6">
+                        <div className="text-center">
+                          <div className="h-48 flex items-center justify-center mb-4">
+                            <img 
+                              src={product.image} 
+                              alt={product.name} 
+                              className="h-40 w-auto object-contain"
+                            />
+                          </div>
+                          <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                            {currentCategory?.name}
+                          </div>
+                          <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                          <p className="text-gray-600 text-sm">{product.description}</p>
+                          <div className="mt-4 text-teal-500 font-semibold flex items-center justify-center gap-2">
+                            Xem chi tiết
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
-                      <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
-                        {currentCategory?.name}
+                    </Link>
+                  ) : (
+                    <div className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                      <div className="p-6">
+                        <div className="text-center">
+                          <div className="h-48 flex items-center justify-center mb-4">
+                            <img 
+                              src={product.image} 
+                              alt={product.name} 
+                              className="h-40 w-auto object-contain"
+                            />
+                          </div>
+                          <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                            {currentCategory?.name}
+                          </div>
+                          <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                          <p className="text-gray-600 text-sm">{product.description}</p>
+                        </div>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
-                      <p className="text-gray-600 text-sm">{product.description}</p>
                     </div>
-                  </div>
+                  )}
                 </motion.div>
               ))}
             </div>

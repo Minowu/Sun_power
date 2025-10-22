@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Users, Target, Award, Globe } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import aboutHero from '../assets/about_hero.jpg';
+import aboutImage from '../assets/aboutImage.png';
 
 const About = () => {
   const stats = [
@@ -26,11 +27,6 @@ const About = () => {
       icon: <Award className="h-8 w-8 text-teal-500" />,
       title: 'Giá trị cốt lõi',
       description: 'Chất lượng, uy tín, sáng tạo và cam kết phục vụ khách hàng tốt nhất'
-    },
-    {
-      icon: <Globe className="h-8 w-8 text-teal-500" />,
-      title: 'Tương lai',
-      description: 'Góp phần xây dựng một Việt Nam xanh, sạch và phát triển bền vững'
     }
   ];
 
@@ -66,10 +62,50 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      {/* Story Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+                Về Thadorobot Energy
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Thadorobot Energy được thành lập với niềm tin rằng năng lượng mặt trời không chỉ là giải pháp 
+                tiết kiệm chi phí mà còn là cách để bảo vệ môi trường cho thế hệ tương lai.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                Với đội ngũ kỹ sư giàu kinh nghiệm và công nghệ tiên tiến, chúng tôi cam kết mang đến 
+                những giải pháp năng lượng mặt trời chất lượng cao, phù hợp với nhu cầu của từng khách hàng.
+              </p>
+              <p className="text-lg text-gray-600">
+                Từ những dự án nhỏ lẻ đến các hệ thống quy mô lớn, chúng tôi luôn đặt chất lượng và 
+                sự hài lòng của khách hàng lên hàng đầu.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-teal-500 h-96 rounded-lg flex items-center justify-center border-radius-lg">
+                <img src={aboutImage} alt="About" className="w-full h-full object-cover rounded-lg" />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       {/* Values Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="mx-auto px-4">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -85,7 +121,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={index}
@@ -106,52 +142,6 @@ const About = () => {
                 </p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Story Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-                Câu Chuyện Của Chúng Tôi
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Sun Power được thành lập với niềm tin rằng năng lượng mặt trời không chỉ là giải pháp 
-                tiết kiệm chi phí mà còn là cách để bảo vệ môi trường cho thế hệ tương lai.
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                Với đội ngũ kỹ sư giàu kinh nghiệm và công nghệ tiên tiến, chúng tôi cam kết mang đến 
-                những giải pháp năng lượng mặt trời chất lượng cao, phù hợp với nhu cầu của từng khách hàng.
-              </p>
-              <p className="text-lg text-gray-600">
-                Từ những dự án nhỏ lẻ đến các hệ thống quy mô lớn, chúng tôi luôn đặt chất lượng và 
-                sự hài lòng của khách hàng lên hàng đầu.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-teal-500 h-96 rounded-lg flex items-center justify-center">
-                <div className="text-white text-center">
-                  <div className="text-6xl mb-4">🏢</div>
-                  <div className="text-xl font-semibold">Trụ sở chính</div>
-                  <div className="text-lg opacity-90">TP. Hồ Chí Minh</div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
