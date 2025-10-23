@@ -11,33 +11,37 @@ alwaysApply: true
 Khi làm việc với file `src/data/products.ts`, hãy tuân theo các quy tắc sau:
 
 ### 1. Cấu trúc sản phẩm hiện tại
-- **Product interface**: id, name, description, image, category, subCategory, slug?
-- **ProductDetail interface**: id, slug, name, images, overview, details, technical
+- **ProductFeature interface**: title, subFeatures[]
+- **Product interface**: id, name, description, image, category, subCategory, slug?, features?
+- **ProductDetail interface**: id, slug, name, images, overview, details, features?
 - **Categories**: inverter, energy_storage, accessories, smart_energy_platform
 
-### 2. Khi tạo field mới cho Product interface:
+### 2. Cấu trúc Features:
 
 ```typescript
-// Ví dụ thêm field mới
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  category: string;
-  subCategory: string;
-  slug?: string;
-  // Thêm field mới ở đây
-  price?: number;           // Giá sản phẩm
-  availability?: boolean;   // Tình trạng có sẵn
-  rating?: number;         // Đánh giá (1-5)
-  tags?: string[];         // Tags phân loại
-  specifications?: {       // Thông số kỹ thuật cơ bản
-    power?: string;
-    voltage?: string;
-    efficiency?: string;
-  };
+export interface ProductFeature {
+  title: string;           // Tiêu đề feature (VD: "Convenient & User-Friendly")
+  subFeatures: string[];   // Danh sách sub-features với bullet points
 }
+
+// Ví dụ sử dụng trong Product
+features: [
+  {
+    title: 'Convenient & User-Friendly',
+    subFeatures: [
+      '• Compact and lightweight design, plug-and-play installation',
+      '• App-based quick setup, simple and efficient'
+    ]
+  },
+  {
+    title: 'Profitable & Efficient', 
+    subFeatures: [
+      '• 160% PV oversizing for extended output',
+      '• 98.2% efficiency with wide MPPT range',
+      '• 18A design, ideal for high-power modules'
+    ]
+  }
+]
 ```
 
 ### 3. Khi thêm sản phẩm mới:
@@ -62,21 +66,20 @@ import newProductImg from '../assets/products/category/subcategory/product.png';
 }
 ```
 
-### 4. Cập nhật createProductDetail function:
+### 4. Dữ liệu ProductDetail:
 
-Khi thêm field mới vào Product interface, cần cập nhật function `createProductDetail` để xử lý field mới:
+Dữ liệu ProductDetail được tạo tự động từ Product array thông qua map function:
 
 ```typescript
-const createProductDetail = (product: Product): ProductDetail => ({
+export const productDetails: ProductDetail[] = products.map(product => ({
   id: product.id,
   slug: product.id,
   name: product.name,
   images: [product.image],
-  // Xử lý field mới nếu cần
-  ...(product.price && { price: product.price }),
-  ...(product.availability && { availability: product.availability }),
-  // ... các field khác
-});
+  overview: { /* ... */ },
+  details: { /* ... */ },
+  features: product.features  // Features được truyền trực tiếp từ Product
+}));
 ```
 
 ### 5. Categories và SubCategories:
@@ -94,7 +97,7 @@ const createProductDetail = (product: Product): ProductDetail => ({
 
 ### 7. Khi được yêu cầu tạo field mới:
 1. Xác định field cần thiết
-2. Cập nhật interface Product
+2. Cập nhật interface Product và ProductDetail
 3. Cập nhật tất cả sản phẩm hiện có (nếu cần)
-4. Cập nhật createProductDetail function
+4. Cập nhật productDetails mapping
 5. Đảm bảo type safety

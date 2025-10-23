@@ -78,7 +78,7 @@ const ProductOverview = ({ name, images, summary, keyFeatures, datasheetLink }: 
               className="inline-flex items-center gap-2 bg-teal-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-teal-600 transition-colors"
             >
               <ExternalLink size={20} />
-              Tải Datasheet
+              Datasheet
             </a>
           </motion.div>
         </div>

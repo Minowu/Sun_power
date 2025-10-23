@@ -1,19 +1,18 @@
 import { motion } from 'framer-motion';
+import type { ProductFeature } from '../../data/products';
 
 interface ProductDetailTabsProps {
-  detailContent: string;
-  detailImageDescription: string;
+  features: ProductFeature[];
   detailImage: string;
 }
 
 const ProductContent = ({ 
-  detailContent, 
-  detailImageDescription,
+  features,
   detailImage
 }: ProductDetailTabsProps) => {
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="bg-black py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Tab Content 1 */}
         <motion.div
@@ -23,22 +22,29 @@ const ProductContent = ({
           className="grid md:grid-cols-2 gap-12 items-center mb-20"
         >
           <div>
-            <h3 className="text-3xl font-bold text-navy mb-6">
-              Chi Tiết Sản Phẩm
+            <h3 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent mb-6">
+              {features[0]?.title || 'Product Features'}
             </h3>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              {detailContent}
-            </p>
+            <ul className="space-y-2 list-none">
+              {features[0]?.subFeatures.map((subFeature, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start gap-3"
+                >
+                  <span className="text-white">{subFeature}</span>
+                </motion.li>
+              ))}
+            </ul>
           </div>
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
+          <div className=" rounded-2xl p-8 shadow-lg">
             <img 
               src={detailImage} 
               alt="Product Detail"
-              className="w-full h-auto object-contain"
-            />
-            <p className="text-sm text-gray-500 mt-4 text-center">
-              {detailImageDescription}
-            </p>
+              className="img-hover w-full h-auto object-contain"
+            />  
           </div>
         </motion.div>
 
@@ -49,23 +55,30 @@ const ProductContent = ({
           transition={{ duration: 0.5, delay: 0.2 }}
           className="grid md:grid-cols-2 gap-12 items-center"
         >
-          <div className="bg-white rounded-2xl p-8 shadow-lg order-2 md:order-1">
+          <div className=" rounded-2xl p-8 shadow-lg order-2 md:order-1">
             <img 
               src={detailImage} 
               alt="Product Features"
-              className="w-full h-auto object-contain"
+              className="img-hover w-full h-auto object-contain"
             />
-            <p className="text-sm text-gray-500 mt-4 text-center">
-              {detailImageDescription}
-            </p>
           </div>
           <div className="order-1 md:order-2">
-            <h3 className="text-3xl font-bold text-navy mb-6">
-              Tính Năng Nổi Bật
+            <h3 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent mb-6">
+              {features[1]?.title || 'Technical Specifications'}
             </h3>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              {detailContent}
-            </p>
+            <ul className="space-y-2 list-none">
+              {features[1]?.subFeatures.map((subFeature, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start gap-3"
+                >
+                  <span className="text-white">{subFeature}</span>
+                </motion.li>
+              ))}
+            </ul>
           </div>
         </motion.div>
       </div>

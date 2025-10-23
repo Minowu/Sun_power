@@ -50,8 +50,7 @@ const ProductDetail = () => {
 
       {/* Product Detail Tabs */}
       <ProductContent 
-        detailContent={currentProduct.details.content}
-        detailImageDescription={currentProduct.details.imageDescription}
+        features={currentProduct.features || []}
         detailImage={currentProduct.images[0]}
       />
 
