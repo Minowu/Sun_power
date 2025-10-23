@@ -42,6 +42,11 @@ footer {
   .img-hover {
     @apply hover:scale-120 transition-all duration-300;
   }
+
+  /* Class cho hiệu ứng gradient text */
+  .text-gradient-teal-blue {
+    @apply bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent;
+  }
 }
 }
 /* Animations */

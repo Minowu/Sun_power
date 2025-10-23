@@ -7,7 +7,7 @@ interface SchemaFrameworkProps {
 
 const SchemaFramework = ({ title, gifImage }: SchemaFrameworkProps) => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           className="text-center mb-16"
@@ -19,7 +19,7 @@ const SchemaFramework = ({ title, gifImage }: SchemaFrameworkProps) => {
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
             {title}
           </h2>
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <img 
               src={gifImage} 
               alt={title}

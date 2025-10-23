@@ -21,7 +21,7 @@ const SolutionDetail = () => {
         />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-navy mb-4">Solution không tồn tại</h1>
+            <h1 className="text-4xl font-bold text-gradient-teal-blue mb-4">Solution không tồn tại</h1>
             <p className="text-gray-600 mb-4">Vui lòng kiểm tra lại đường dẫn</p>
             <Link 
               to="/solutions" 
@@ -40,12 +40,13 @@ const SolutionDetail = () => {
       <PageHero 
         title={currentSolution.overview.title}
         subtitle="Giải pháp năng lượng mặt trời toàn diện"
-        backgroundImage={aboutHero}
+        backgroundImage={currentSolution.overview.image}
       />
 
       {/* Solution Overview */}
       <SolutionOverview 
         title={currentSolution.overview.title}
+        description={currentSolution.overview.description}
         image={currentSolution.overview.image}
       />
 
@@ -56,49 +57,30 @@ const SolutionDetail = () => {
       />
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-              Tính Năng Nổi Bật
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Những tính năng vượt trội làm nên sự khác biệt của giải pháp
-            </p>
-          </motion.div>
+      <section className="bg-black w-screen pt-20 rounded-2xl">
+        {/* Feature 1 */}
+        <FeatureBlock 
+          title={currentSolution.feature1.title}
+          detail1={currentSolution.feature1.detail1}
+          detail2={currentSolution.feature1.detail2}
+          image={currentSolution.feature1.image}
+        />
 
-          <div className="space-y-12">
-            {/* Feature 1 */}
-            <FeatureBlock 
-              title={currentSolution.feature1.title}
-              detail1={currentSolution.feature1.detail1}
-              detail2={currentSolution.feature1.detail2}
-              image={currentSolution.feature1.image}
-            />
+        {/* Feature 2 */}
+        <FeatureBlock 
+          title={currentSolution.feature2.title}
+          detail1={currentSolution.feature2.detail1}
+          detail2={currentSolution.feature2.detail2}
+          image={currentSolution.feature2.image}
+        />
 
-            {/* Feature 2 */}
-            <FeatureBlock 
-              title={currentSolution.feature2.title}
-              detail1={currentSolution.feature2.detail1}
-              detail2={currentSolution.feature2.detail2}
-              image={currentSolution.feature2.image}
-            />
-
-            {/* Feature 3 - Tái sử dụng component FeatureBlock */}
-            <FeatureBlock 
-              title={currentSolution.feature3.title}
-              detail1={currentSolution.feature3.detail1}
-              detail2={currentSolution.feature3.detail2}
-              image={currentSolution.feature3.image}
-            />
-          </div>
-        </div>
+        {/* Feature 3 - Tái sử dụng component FeatureBlock */}
+        <FeatureBlock 
+          title={currentSolution.feature3.title}
+          detail1={currentSolution.feature3.detail1}
+          detail2={currentSolution.feature3.detail2}
+          image={currentSolution.feature3.image}
+        />
       </section>
 
       {/* CTA Section */}

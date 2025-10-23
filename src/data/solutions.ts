@@ -6,9 +6,11 @@ import solution4 from '../assets/solution_4.jpg';
 import solution5 from '../assets/solution_5.jpg';
 import solution6 from '../assets/solution_6.jpg';
 import solution7 from '../assets/solution_7.jpg';
+import solution1_gif from '../assets/1.gif';
 
 export interface SolutionOverview {
   title: string;
+  description: string;
   image: string;
 }
 
@@ -42,11 +44,12 @@ export const solutionsData: Solution[] = [
     category: "residential",
     overview: {
       title: "Residential String Inverter PV Solution",
+      description: "Residential String Inverter PV Solution enhances system reliability and power generation efficiency through a design where each module operates independently. Its flexible configuration adapts to various roof types, offering easy installation and suitability for different household scenarios. Combined with inverters and real-time monitoring, the system enables efficient energy management, optimizes power generation, reduces electricity costs, and helps users maximize self-consumption of green energy.",
       image: solution1
     },
     schema: {
       title: "Scheme Framework",
-      gifImage: solution1
+      gifImage: solution1_gif
     },
     feature1: {
       title: "Hiệu Suất Cao & Tiết Kiệm",
@@ -73,11 +76,12 @@ export const solutionsData: Solution[] = [
     category: "residential",
     overview: {
       title: "Residential ESS Solution",
+      description: "Residential ESS Solution provides intelligent energy storage capabilities with lithium-ion batteries ranging from 5kWh to 20kWh capacity. Its advanced battery management system automatically optimizes charge and discharge cycles based on usage patterns and electricity pricing. The solution ensures reliable backup power with seamless grid-tie and off-grid operation, enabling homeowners to maximize energy independence and reduce electricity costs through smart energy management.",
       image: solution2
     },
     schema: {
       title: "Scheme Framework",
-      gifImage: solution2
+      gifImage: solution1_gif
     },
     feature1: {
       title: "Lưu Trữ Năng Lượng Thông Minh",
@@ -104,11 +108,12 @@ export const solutionsData: Solution[] = [
     category: "residential",
     overview: {
       title: "Microinverter Solution",
+      description: "Microinverter Solution maximizes energy harvest through module-level power optimization, where each solar panel operates independently with its own inverter. This advanced technology minimizes shading effects and module mismatch issues, ensuring optimal performance even in challenging installation conditions. The low-voltage DC design enhances safety during installation and maintenance, while comprehensive monitoring capabilities provide real-time insights into individual panel performance for maximum system efficiency.",
       image: solution3
     },
     schema: {
       title: "Scheme Framework",
-      gifImage: solution3
+      gifImage: solution1_gif
     },
     feature1: {
       title: "Tối Ưu Module-Level",
@@ -135,11 +140,12 @@ export const solutionsData: Solution[] = [
     category: "ci",
     overview: {
       title: "C&I PV Solution",
+      description: "C&I PV Solution delivers integrated solar power systems designed for commercial and industrial applications, combining PV inverters and battery inverters in a unified platform. Its advanced MPPT technology ensures maximum energy conversion efficiency while supporting both grid-tie and off-grid configurations. The intelligent control system automatically manages power sources based on load demand and electricity pricing, providing businesses with reliable renewable energy solutions and significant cost savings.",
       image: solution4
     },
     schema: {
       title: "Scheme Framework",
-      gifImage: solution2
+      gifImage: solution1_gif
     },
     feature1: {
       title: "Tích Hợp Đa Chức Năng",
@@ -166,11 +172,12 @@ export const solutionsData: Solution[] = [
     category: "ci",
     overview: {
       title: "C&I ESS Solution",
+      description: "C&I ESS Solution offers cost-effective energy storage systems for large-scale commercial and industrial projects with simplified design and minimal maintenance requirements. Its modular architecture enables easy system expansion and compatibility with various solar panel configurations. The robust construction ensures long-term reliability in harsh environments, while the streamlined design reduces potential failure points, delivering optimal performance and rapid return on investment for business applications.",
       image: solution5
     },
     schema: {
       title: "Scheme Framework",
-      gifImage: solution5
+      gifImage: solution1_gif
     },
     feature1: {
       title: "Chi Phí Hiệu Quả",
@@ -197,11 +204,12 @@ export const solutionsData: Solution[] = [
     category: "utility",
     overview: {
       title: "Utility PV System",
+      description: "Utility PV System provides megawatt-scale solar power solutions for utility-scale projects, ranging from 1MW to hundreds of megawatts for large solar farms. Its centralized inverter technology delivers superior efficiency and grid control capabilities, seamlessly integrating with national power grids and large-scale energy storage systems. The comprehensive SCADA integration and advanced energy management tools enable professional remote monitoring and control, ensuring optimal performance and detailed operational reporting.",
       image: solution6
     },
     schema: {
       title: "Scheme Framework",
-      gifImage: solution6
+      gifImage: solution1_gif
     },
     feature1: {
       title: "Quy Mô Megawatt",
@@ -228,11 +236,12 @@ export const solutionsData: Solution[] = [
     category: "utility",
     overview: {
       title: "Utility ESS Solution",
+      description: "Utility ESS Solution delivers containerized energy storage systems with capacities from 1MWh to 10MWh, designed for utility-scale applications and renewable energy integration. Its modular container design enables easy transportation and installation at various locations, with pre-integrated control systems, cooling, and safety features. The plug-and-play connectivity seamlessly integrates with existing PV systems and power grids, supporting diverse applications including peak shaving, frequency regulation, and microgrid projects.",
       image: solution7
     },
     schema: {
       title: "Scheme Framework",
-      gifImage: solution7
+      gifImage: solution1_gif
     },
     feature1: {
       title: "Lưu Trữ Quy Mô Lớn",
