@@ -6,9 +6,9 @@ import aboutImage from '../assets/aboutImage.png';
 
 const About = () => {
   const stats = [
-    { number: '500+', label: 'Dự án hoàn thành' },
-    { number: '50+', label: 'Khách hàng tin tưởng' },
-    { number: '10+', label: 'Năm kinh nghiệm' },
+    { number: '50+', label: 'Dự án hoàn thành' },
+    { number: '15+', label: 'Khách hàng tin tưởng' },
+    { number: '5+', label: 'Năm kinh nghiệm' },
     { number: '24/7', label: 'Hỗ trợ khách hàng' }
   ];
 
@@ -121,7 +121,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
               <motion.div
                 key={index}

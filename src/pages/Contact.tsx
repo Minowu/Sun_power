@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Send, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import PageHero from '../components/PageHero';
 import aboutHero from '../assets/about_hero.jpg';
@@ -31,28 +31,6 @@ const Contact = () => {
     }, 3000);
   };
 
-  const contactInfo = [
-    {
-      icon: <MapPin className="h-6 w-6 text-teal-500" />,
-      title: 'Địa chỉ',
-      details: ['123 Đường ABC, Quận 1', 'TP. Hồ Chí Minh, Việt Nam']
-    },
-    {
-      icon: <Phone className="h-6 w-6 text-teal-500" />,
-      title: 'Điện thoại',
-      details: ['+84 28 1234 5678', '+84 901 234 567']
-    },
-    {
-      icon: <Mail className="h-6 w-6 text-teal-500" />,
-      title: 'Email',
-      details: ['info@sunpower.vn', 'support@sunpower.vn']
-    },
-    {
-      icon: <Clock className="h-6 w-6 text-teal-500" />,
-      title: 'Giờ làm việc',
-      details: ['Thứ 2 - Thứ 6: 8:00 - 17:30', 'Thứ 7: 8:00 - 12:00']
-    }
-  ];
 
   const services = [
     'Tư vấn hệ thống điện mặt trời',
@@ -69,51 +47,6 @@ const Contact = () => {
         subtitle="Chúng tôi sẵn sàng hỗ trợ và tư vấn cho bạn"
         backgroundImage={aboutHero}
       />
-
-      {/* Contact Info Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-              Thông Tin Liên Hệ
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Liên hệ với chúng tôi qua các kênh sau
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex justify-center mb-4">
-                  {info.icon}
-                </div>
-                <h3 className="text-xl font-bold text-navy mb-3">
-                  {info.title}
-                </h3>
-                {info.details.map((detail, detailIndex) => (
-                  <p key={detailIndex} className="text-gray-600 mb-1">
-                    {detail}
-                  </p>
-                ))}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Contact Form & Map Section */}
       <section className="py-20">
@@ -269,63 +202,6 @@ const Contact = () => {
                 </ul>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-              Câu Hỏi Thường Gặp
-            </h2>
-            <p className="text-xl text-gray-600">
-              Những câu hỏi phổ biến về dịch vụ của chúng tôi
-            </p>
-          </motion.div>
-
-          <div className="space-y-6">
-            {[
-              {
-                question: 'Thời gian lắp đặt hệ thống điện mặt trời là bao lâu?',
-                answer: 'Thời gian lắp đặt thường từ 1-3 ngày tùy thuộc vào quy mô hệ thống và điều kiện thực tế.'
-              },
-              {
-                question: 'Hệ thống có hoạt động được trong mùa mưa không?',
-                answer: 'Có, hệ thống vẫn hoạt động trong mùa mưa nhưng hiệu suất sẽ giảm khoảng 20-30%.'
-              },
-              {
-                question: 'Chi phí bảo trì hàng năm là bao nhiêu?',
-                answer: 'Chi phí bảo trì hàng năm thường từ 1-2% giá trị hệ thống, bao gồm vệ sinh và kiểm tra định kỳ.'
-              },
-              {
-                question: 'Có hỗ trợ vay vốn không?',
-                answer: 'Chúng tôi có hợp tác với các ngân hàng để hỗ trợ khách hàng vay vốn với lãi suất ưu đãi.'
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-sm"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h4 className="text-lg font-semibold text-navy mb-3">
-                  {faq.question}
-                </h4>
-                <p className="text-gray-600">
-                  {faq.answer}
-                </p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
