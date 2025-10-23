@@ -4,7 +4,8 @@ import PageHero from '../components/PageHero';
 import ProductOverview from '../components/product/ProductOverview';
 import ProductContent from '../components/product/ProductContent';
 import { productDetails } from '../data/products';
-import aboutHero from '../assets/about_hero.jpg';
+import Hero_img from '../assets/product_detail_img_hero.jpg';
+
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -16,7 +17,7 @@ const ProductDetail = () => {
         <PageHero 
           title="Sản Phẩm"
           subtitle="Khám phá các sản phẩm năng lượng mặt trời chất lượng cao"
-          backgroundImage={aboutHero}
+          backgroundImage={Hero_img}
         />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
@@ -37,9 +38,8 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-white">
     {/* // Background Image cho nav */}
-      <div className="relative w-screen h-[56px] flex items-center justify-center overflow-hidden" style={{ backgroundImage: `url(${aboutHero})` }}></div>
-
       {/* Product Overview */}
+    <div className="relative w-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${Hero_img})` }}>
       <ProductOverview 
         name={currentProduct.name}
         images={currentProduct.images}
@@ -47,6 +47,7 @@ const ProductDetail = () => {
         keyFeatures={currentProduct.overview.keyFeatures}
         datasheetLink={currentProduct.overview.datasheetLink}
       />
+    </div>
 
       {/* Product Detail Tabs */}
       <ProductContent 

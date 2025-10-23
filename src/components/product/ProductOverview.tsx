@@ -11,7 +11,7 @@ interface ProductOverviewProps {
 
 const ProductOverview = ({ name, images, summary, keyFeatures, datasheetLink }: ProductOverviewProps) => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Image Gallery */}
@@ -38,17 +38,17 @@ const ProductOverview = ({ name, images, summary, keyFeatures, datasheetLink }: 
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
               {name}
             </h2>
             
-            <p className="text-base text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base text-white/70 mb-8 leading-relaxed">
               {summary}
             </p>
 
             {/* Key Features */}
             <div className="mb-8">
-              <h3 className="text-xl font-bold text-navy mb-4">
+              <h3 className="text-xl font-bold text-white/90 mb-4">
                 Tính Năng Nổi Bật
               </h3>
               <ul className="space-y-3">
@@ -64,7 +64,7 @@ const ProductOverview = ({ name, images, summary, keyFeatures, datasheetLink }: 
                     <span className="flex-shrink-0 w-6 h-6 bg-teal-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-0.5">
                       ✓
                     </span>
-                    <span className="text-gray-700 text-sm">{feature}</span>
+                    <span className="text-white/70 text-sm">{feature}</span>
                   </motion.li>
                 ))}
               </ul>
