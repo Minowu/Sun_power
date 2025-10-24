@@ -203,5 +203,196 @@
       "name": "Smart Energy Platform",
       "description": "Cloud Platform"
     }
+  },
+  "keyFeatures": {
+    "h3k-3k6-5k-6k-hs1": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h3k-3k6-4k-4k6-5k-6k-8k-hs": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h5k-6k-8k-10k-12k-ht": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h15k-20k-25k-ht": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h50k-75k-80k-99k9-100k-110k-125k-et": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "m300-400-500-s-sw": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "m600-700-800-900-1000-s-sw": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "m1600-1800-2000-s-sw": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "s2k-3k-3k3-3k6-4k-4k6-5k-6k-s1": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "s3k-3k6-4k-4k6-5k-6k-7k5-s": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "s7k-8k-9k-10k-12k-s": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "s8k-10k-12k-t": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "ms-2500": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "e50-100-h3": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "e50-100-150-200-250-300-400-500-h2": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "e50-100-150-200-h": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h6k-9k-12k-15k-hta": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "50-125kw-215kwh": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "ef215p2-m-ms": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "ef215p2-s": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "el372-418p2-dc": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "el3000-4000-5000p2-dc": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "smart-ecs": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "hyxilogger": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "dcs-4g-wl": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "dmu-4g-w": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "smart-energy-platform": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ]
   }
 }

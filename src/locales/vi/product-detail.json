@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Sản Phẩm",
+    "subtitle": "Khám phá các sản phẩm năng lượng mặt trời chất lượng cao"
+  },
+  "notFound": {
+    "title": "Sản phẩm không tồn tại",
+    "description": "Vui lòng kiểm tra lại đường dẫn",
+    "backButton": "Quay lại danh sách"
+  },
+  "overview": {
+    "keyFeaturesLabel": "Tính Năng Nổi Bật",
+    "datasheetLabel": "Datasheet"
+  },
+  "content": {
+    "productFeaturesLabel": "Tính Năng Sản Phẩm",
+    "technicalSpecsLabel": "Thông Số Kỹ Thuật",
+    "productDetailAlt": "Chi Tiết Sản Phẩm",
+    "productFeaturesAlt": "Tính Năng Sản Phẩm"
+  },
+  "cta": {
+    "title": "Quan Tâm Đến Sản Phẩm?",
+    "description": "Liên hệ ngay để được tư vấn chi tiết và báo giá tốt nhất",
+    "button": "Liên hệ tư vấn"
+  }
+}

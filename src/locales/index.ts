@@ -10,6 +10,7 @@ import viFooter from './vi/footer.json';
 import viSolutions from './vi/solutions.json';
 import viAbout from './vi/about.json';
 import viContact from './vi/contact.json';
+import viProductDetail from './vi/product-detail.json';
 
 import enNavbar from './en/navbar.json';
 import enHome from './en/home.json';
@@ -18,6 +19,7 @@ import enFooter from './en/footer.json';
 import enSolutions from './en/solutions.json';
 import enAbout from './en/about.json';
 import enContact from './en/contact.json';
+import enProductDetail from './en/product-detail.json';
 
 const resources = {
   vi: {
@@ -27,7 +29,8 @@ const resources = {
     footer: viFooter,
     solutions: viSolutions,
     about: viAbout,
-    contact: viContact
+    contact: viContact,
+    'product-detail': viProductDetail
   },
   en: {
     navbar: enNavbar,
@@ -36,7 +39,8 @@ const resources = {
     footer: enFooter,
     solutions: enSolutions,
     about: enAbout,
-    contact: enContact
+    contact: enContact,
+    'product-detail': enProductDetail
   }
 };
 

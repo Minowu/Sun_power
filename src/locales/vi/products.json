@@ -203,5 +203,196 @@
       "name": "Smart Energy Platform",
       "description": "Nền Tảng Đám Mây"
     }
+  },
+  "keyFeatures": {
+    "h3k-3k6-5k-6k-hs1": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h3k-3k6-4k-4k6-5k-6k-8k-hs": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h5k-6k-8k-10k-12k-ht": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h15k-20k-25k-ht": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h50k-75k-80k-99k9-100k-110k-125k-et": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "m300-400-500-s-sw": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "m600-700-800-900-1000-s-sw": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "m1600-1800-2000-s-sw": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "s2k-3k-3k3-3k6-4k-4k6-5k-6k-s1": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "s3k-3k6-4k-4k6-5k-6k-7k5-s": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "s7k-8k-9k-10k-12k-s": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "s8k-10k-12k-t": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "ms-2500": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "e50-100-h3": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "e50-100-150-200-250-300-400-500-h2": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "e50-100-150-200-h": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h6k-9k-12k-15k-hta": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "50-125kw-215kwh": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "ef215p2-m-ms": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "ef215p2-s": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "el372-418p2-dc": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "el3000-4000-5000p2-dc": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "smart-ecs": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "hyxilogger": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "dcs-4g-wl": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "dmu-4g-w": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "smart-energy-platform": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ]
   }
 }

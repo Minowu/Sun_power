@@ -5,9 +5,7 @@ html {
   font-family: "SohoGothicPro-Light", Arial, "Source Han Sans CN", "noto sans", "microsoft yahei", Helvetica, sans-serif;
   scroll-snap-type: y proximity;
 }
-section {
-  scroll-snap-align: start;
-}
+
 footer {
   scroll-snap-align: center;
 }

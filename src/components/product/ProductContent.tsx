@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import type { ProductFeature } from '../../data/products';
 
 interface ProductDetailTabsProps {
@@ -10,6 +11,7 @@ const ProductContent = ({
   features,
   detailImage
 }: ProductDetailTabsProps) => {
+  const { t } = useTranslation('product-detail');
 
   return (
     <section className="bg-black py-20">
@@ -23,7 +25,7 @@ const ProductContent = ({
         >
           <div>
             <h3 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent mb-6">
-              {features[0]?.title || 'Product Features'}
+              {features[0]?.title || t('content.productFeaturesLabel')}
             </h3>
             <ul className="space-y-2 list-none">
               {features[0]?.subFeatures.map((subFeature, index) => (
@@ -42,7 +44,7 @@ const ProductContent = ({
           <div className=" rounded-2xl p-8 shadow-lg">
             <img 
               src={detailImage} 
-              alt="Product Detail"
+              alt={t('content.productDetailAlt')}
               className="img-hover w-full h-auto object-contain"
             />  
           </div>
@@ -58,13 +60,13 @@ const ProductContent = ({
           <div className=" rounded-2xl p-8 shadow-lg order-2 md:order-1">
             <img 
               src={detailImage} 
-              alt="Product Features"
+              alt={t('content.productFeaturesAlt')}
               className="img-hover w-full h-auto object-contain"
             />
           </div>
           <div className="order-1 md:order-2">
             <h3 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent mb-6">
-              {features[1]?.title || 'Technical Specifications'}
+              {features[1]?.title || t('content.technicalSpecsLabel')}
             </h3>
             <ul className="space-y-2 list-none">
               {features[1]?.subFeatures.map((subFeature, index) => (
