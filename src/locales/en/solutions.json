@@ -1,7 +1,26 @@
 {
   "hero": {
-    "title": "Solutions",
+    "title": "Solution",
     "subtitle": "Comprehensive solar energy solutions for every need"
+  },
+  "notFound": {
+    "title": "Solution Not Found",
+    "description": "Please check the URL and try again",
+    "backButton": "Back to Solutions"
+  },
+  "overview": {
+    "title": "Solution Overview"
+  },
+  "schema": {
+    "title": "Schema Framework"
+  },
+  "features": {
+    "title": "Features"
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Contact us now for consultation on the most suitable solution for your project",
+    "button": "Free Consultation"
   },
   "categories": {
     "residential": "Residential",
@@ -9,33 +28,180 @@
     "utility": "Utility"
   },
   "solutions": {
-    "residential_string_inverter_pv_solution": {
+    "residential-string-inverter-pv-solution": {
       "title": "Residential String Inverter PV Solution",
-      "description": "High-efficiency string inverter system for residential rooftop installations"
+      "description": "High-efficiency string inverter system for residential rooftop installations",
+      "overview": {
+        "title": "Residential String Inverter PV Solution",
+        "description": "Residential String Inverter PV Solution enhances system reliability and power generation efficiency through a design where each module operates independently. Its flexible configuration adapts to various roof types, offering easy installation and suitability for different household scenarios. Combined with inverters and real-time monitoring, the system enables efficient energy management, optimizes power generation, reduces electricity costs, and helps users maximize self-consumption of green energy."
+      },
+      "features": {
+        "feature1": {
+          "title": "High Efficiency & Savings",
+          "detail1": "DC-AC conversion efficiency up to 98.5%, maximizing energy harvested from solar panels",
+          "detail2": "Save 70-90% on monthly electricity bills with optimal self-consumption capability"
+        },
+        "feature2": {
+          "title": "Absolute Safety",
+          "detail1": "Lithium-ion batteries with safe LFP technology, non-flammable and up to 6000 cycles lifespan",
+          "detail2": "Multi-layer protection system with GFCI, AFCI and advanced electrical safety devices"
+        },
+        "feature3": {
+          "title": "Smart Management",
+          "detail1": "Mobile app for real-time system performance monitoring and remote control",
+          "detail2": "AI automatically optimizes battery charge/discharge schedules based on usage patterns and electricity pricing"
+        }
+      }
     },
-    "residential_ess_solution": {
+    "residential-ess-solution": {
       "title": "Residential ESS Solution",
-      "description": "Advanced energy storage system for home backup and self-consumption"
+      "description": "Advanced energy storage system for home backup and self-consumption",
+      "overview": {
+        "title": "Residential ESS Solution",
+        "description": "Residential ESS Solution provides intelligent energy storage capabilities with lithium-ion batteries ranging from 5kWh to 20kWh capacity. Its advanced battery management system automatically optimizes charge and discharge cycles based on usage patterns and electricity pricing. The solution ensures reliable backup power with seamless grid-tie and off-grid operation, enabling homeowners to maximize energy independence and reduce electricity costs through smart energy management."
+      },
+      "features": {
+        "feature1": {
+          "title": "Smart Energy Storage",
+          "detail1": "Lithium-ion energy storage system with capacity from 5kWh to 20kWh",
+          "detail2": "Automatic charge/discharge management based on usage needs and electricity pricing"
+        },
+        "feature2": {
+          "title": "Reliable Backup Power",
+          "detail1": "Ensures backup power during outages with < 10ms switching time",
+          "detail2": "Supports both on-grid and off-grid modes flexibly"
+        },
+        "feature3": {
+          "title": "Monitoring & Control",
+          "detail1": "Mobile app for real-time monitoring and remote control",
+          "detail2": "Integration with smart home systems and IoT devices"
+        }
+      }
     },
-    "microinverter_solution": {
+    "microinverter-solution": {
       "title": "Microinverter Solution",
-      "description": "Module-level power optimization for maximum energy harvest and safety"
+      "description": "Module-level power optimization for maximum energy harvest and safety",
+      "overview": {
+        "title": "Microinverter Solution",
+        "description": "Microinverter Solution maximizes energy harvest through module-level power optimization, where each solar panel operates independently with its own inverter. This advanced technology minimizes shading effects and module mismatch issues, ensuring optimal performance even in challenging installation conditions. The low-voltage DC design enhances safety during installation and maintenance, while comprehensive monitoring capabilities provide real-time insights into individual panel performance for maximum system efficiency."
+      },
+      "features": {
+        "feature1": {
+          "title": "Module-Level Optimization",
+          "detail1": "Each panel has its own inverter, maximizing individual module performance",
+          "detail2": "Minimizes impact of shading and failures on individual panels"
+        },
+        "feature2": {
+          "title": "Safety & Easy Maintenance",
+          "detail1": "Low DC voltage, safe for installers and maintenance personnel",
+          "detail2": "Easy module replacement without affecting the entire system"
+        },
+        "feature3": {
+          "title": "Detailed Monitoring",
+          "detail1": "Track individual panel performance through mobile app",
+          "detail2": "Early warning alerts and suggested troubleshooting solutions"
+        }
+      }
     },
-    "ci_pv_solution": {
+    "ci-pv-solution": {
       "title": "C&I PV Solution",
-      "description": "Scalable photovoltaic systems for commercial and industrial facilities"
+      "description": "Scalable photovoltaic systems for commercial and industrial facilities",
+      "overview": {
+        "title": "C&I PV Solution",
+        "description": "C&I PV Solution delivers integrated solar power systems designed for commercial and industrial applications, combining PV inverters and battery inverters in a unified platform. Its advanced MPPT technology ensures maximum energy conversion efficiency while supporting both grid-tie and off-grid configurations. The intelligent control system automatically manages power sources based on load demand and electricity pricing, providing businesses with reliable renewable energy solutions and significant cost savings."
+      },
+      "features": {
+        "feature1": {
+          "title": "Multi-Function Integration",
+          "detail1": "Combines PV inverter and battery inverter in a single device",
+          "detail2": "Supports both on-grid and off-grid modes flexibly"
+        },
+        "feature2": {
+          "title": "Outstanding Efficiency",
+          "detail1": "High conversion efficiency with advanced MPPT technology",
+          "detail2": "Optimizes energy from both solar panels and battery storage"
+        },
+        "feature3": {
+          "title": "Smart Control",
+          "detail1": "Automatically switches between power sources based on load and electricity pricing",
+          "detail2": "Integration with smart energy management systems"
+        }
+      }
     },
-    "ci_ess_solution": {
+    "ci-ess-solution": {
       "title": "C&I ESS Solution",
-      "description": "Large-scale energy storage for peak shaving and demand response"
+      "description": "Large-scale energy storage for peak shaving and demand response",
+      "overview": {
+        "title": "C&I ESS Solution",
+        "description": "C&I ESS Solution offers cost-effective energy storage systems for large-scale commercial and industrial projects with simplified design and minimal maintenance requirements. Its modular architecture enables easy system expansion and compatibility with various solar panel configurations. The robust construction ensures long-term reliability in harsh environments, while the streamlined design reduces potential failure points, delivering optimal performance and rapid return on investment for business applications."
+      },
+      "features": {
+        "feature1": {
+          "title": "Cost Effective",
+          "detail1": "Economical solution for large-scale projects with low investment cost",
+          "detail2": "Fast return on investment with high efficiency and low maintenance cost"
+        },
+        "feature2": {
+          "title": "High Reliability",
+          "detail1": "Simple design, fewer components, minimizing failure points",
+          "detail2": "Long lifespan with good resistance in harsh environments"
+        },
+        "feature3": {
+          "title": "Easy Expansion",
+          "detail1": "Modular design allows easy system expansion",
+          "detail2": "Compatible with various panel types and configurations"
+        }
+      }
     },
-    "utility_pv_system": {
+    "utility-pv-system": {
       "title": "Utility PV System",
-      "description": "Megawatt-scale solar farms for utility grid integration"
+      "description": "Megawatt-scale solar farms for utility grid integration",
+      "overview": {
+        "title": "Utility PV System",
+        "description": "Utility PV System provides megawatt-scale solar power solutions for utility-scale projects, ranging from 1MW to hundreds of megawatts for large solar farms. Its centralized inverter technology delivers superior efficiency and grid control capabilities, seamlessly integrating with national power grids and large-scale energy storage systems. The comprehensive SCADA integration and advanced energy management tools enable professional remote monitoring and control, ensuring optimal performance and detailed operational reporting."
+      },
+      "features": {
+        "feature1": {
+          "title": "Megawatt Scale",
+          "detail1": "Systems from 1MW to hundreds of MW for large solar farms",
+          "detail2": "Integration with national power grids and large-scale energy storage systems"
+        },
+        "feature2": {
+          "title": "Optimal Efficiency",
+          "detail1": "Centralized inverter technology with high efficiency and good control capability",
+          "detail2": "Integration with SCADA systems and advanced energy management tools"
+        },
+        "feature3": {
+          "title": "Professional Management",
+          "detail1": "Remote monitoring and control system with professional technical team",
+          "detail2": "Detailed reporting on performance, output and operational status"
+        }
+      }
     },
-    "utility_ess_solution": {
+    "utility-ess-solution": {
       "title": "Utility ESS Solution",
-      "description": "Grid-scale battery storage for renewable energy stabilization"
+      "description": "Grid-scale battery storage for renewable energy stabilization",
+      "overview": {
+        "title": "Utility ESS Solution",
+        "description": "Utility ESS Solution delivers containerized energy storage systems with capacities from 1MWh to 10MWh, designed for utility-scale applications and renewable energy integration. Its modular container design enables easy transportation and installation at various locations, with pre-integrated control systems, cooling, and safety features. The plug-and-play connectivity seamlessly integrates with existing PV systems and power grids, supporting diverse applications including peak shaving, frequency regulation, and microgrid projects."
+      },
+      "features": {
+        "feature1": {
+          "title": "Large-Scale Storage",
+          "detail1": "Containerized energy storage system with capacity from 1MWh to 10MWh",
+          "detail2": "Modular design, easy transportation and installation at various locations"
+        },
+        "feature2": {
+          "title": "Complete Integration",
+          "detail1": "Pre-integrated control systems, cooling and safety features in container",
+          "detail2": "Plug-and-play connectivity with existing PV systems and power grids"
+        },
+        "feature3": {
+          "title": "Diverse Applications",
+          "detail1": "Suitable for peak shaving, frequency regulation and backup power",
+          "detail2": "Integration with renewable energy projects and microgrids"
+        }
+      }
     }
   }
 }

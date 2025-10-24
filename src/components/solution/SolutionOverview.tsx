@@ -18,7 +18,7 @@ const SolutionOverview = ({ title, description, image }: SolutionOverviewProps) 
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-            Solution Overview
+            {title}
           </h2>
           <p className="text-xl text-gray-600 max-w-5xl mx-auto mb-6">
             {description}

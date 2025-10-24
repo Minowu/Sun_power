@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero';
 import SolutionOverview from '../components/solution/SolutionOverview';
 import SchemaFramework from '../components/solution/SchemaFramework';
@@ -9,25 +10,26 @@ import aboutHero from '../assets/about_hero.jpg';
 
 const SolutionDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { t } = useTranslation('solutions');
   const currentSolution = solutionsData.find(s => s.slug === slug);
 
   if (!currentSolution) {
     return (
       <div className="min-h-screen bg-white">
         <PageHero 
-          title="Giải Pháp"
-          subtitle="Giải pháp năng lượng mặt trời toàn diện cho mọi nhu cầu"
+          title={t('hero.title')}
+          subtitle={t('hero.subtitle')}
           backgroundImage={aboutHero}
         />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gradient-teal-blue mb-4">Solution không tồn tại</h1>
-            <p className="text-gray-600 mb-4">Vui lòng kiểm tra lại đường dẫn</p>
+            <h1 className="text-4xl font-bold text-gradient-teal-blue mb-4">{t('notFound.title')}</h1>
+            <p className="text-gray-600 mb-4">{t('notFound.description')}</p>
             <Link 
               to="/solutions" 
               className="bg-teal-500 text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition-colors"
             >
-              Quay lại danh sách
+              {t('notFound.backButton')}
             </Link>
           </div>
         </div>
@@ -38,21 +40,21 @@ const SolutionDetail = () => {
   return (
     <div className="min-h-screen bg-white">
       <PageHero 
-        title={currentSolution.overview.title}
-        subtitle="Giải pháp năng lượng mặt trời toàn diện"
+        title={t(`solutions.${currentSolution.slug}.overview.title`, currentSolution.overview.title)}
+        subtitle={t('hero.subtitle')}
         backgroundImage={currentSolution.overview.image}
       />
 
       {/* Solution Overview */}
       <SolutionOverview 
-        title={currentSolution.overview.title}
-        description={currentSolution.overview.description}
+        title={t('overview.title')}
+        description={t(`solutions.${currentSolution.slug}.overview.description`, currentSolution.overview.description)}
         image={currentSolution.overview.image}
       />
 
       {/* Schema Framework */}
       <SchemaFramework 
-        title={currentSolution.schema.title}
+        title={t('schema.title')}
         gifImage={currentSolution.schema.gifImage}
       />
 
@@ -60,25 +62,25 @@ const SolutionDetail = () => {
       <section className="bg-black w-screen pt-20 rounded-2xl">
         {/* Feature 1 */}
         <FeatureBlock 
-          title={currentSolution.feature1.title}
-          detail1={currentSolution.feature1.detail1}
-          detail2={currentSolution.feature1.detail2}
+          title={t(`solutions.${currentSolution.slug}.features.feature1.title`, currentSolution.feature1.title)}
+          detail1={t(`solutions.${currentSolution.slug}.features.feature1.detail1`, currentSolution.feature1.detail1)}
+          detail2={t(`solutions.${currentSolution.slug}.features.feature1.detail2`, currentSolution.feature1.detail2)}
           image={currentSolution.feature1.image}
         />
 
         {/* Feature 2 */}
         <FeatureBlock 
-          title={currentSolution.feature2.title}
-          detail1={currentSolution.feature2.detail1}
-          detail2={currentSolution.feature2.detail2}
+          title={t(`solutions.${currentSolution.slug}.features.feature2.title`, currentSolution.feature2.title)}
+          detail1={t(`solutions.${currentSolution.slug}.features.feature2.detail1`, currentSolution.feature2.detail1)}
+          detail2={t(`solutions.${currentSolution.slug}.features.feature2.detail2`, currentSolution.feature2.detail2)}
           image={currentSolution.feature2.image}
         />
 
         {/* Feature 3 - Tái sử dụng component FeatureBlock */}
         <FeatureBlock 
-          title={currentSolution.feature3.title}
-          detail1={currentSolution.feature3.detail1}
-          detail2={currentSolution.feature3.detail2}
+          title={t(`solutions.${currentSolution.slug}.features.feature3.title`, currentSolution.feature3.title)}
+          detail1={t(`solutions.${currentSolution.slug}.features.feature3.detail1`, currentSolution.feature3.detail1)}
+          detail2={t(`solutions.${currentSolution.slug}.features.feature3.detail2`, currentSolution.feature3.detail2)}
           image={currentSolution.feature3.image}
         />
       </section>
@@ -93,14 +95,14 @@ const SolutionDetail = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Sẵn Sàng Bắt Đầu?
+              {t('cta.title')}
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Liên hệ ngay để được tư vấn giải pháp phù hợp nhất cho dự án của bạn
+              {t('cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-teal-500 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
-                Tư vấn miễn phí
+                {t('cta.button')}
               </button>
             </div>
           </motion.div>
