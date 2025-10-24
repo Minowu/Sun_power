@@ -3,6 +3,7 @@ import { Users, Target, Award, Globe } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import aboutHero from '../assets/about_hero.jpg';
 import aboutImage from '../assets/aboutImage.png';
+import aboutTarget from '../assets/about.png';
 
 const About = () => {
   const stats = [
@@ -104,7 +105,7 @@ const About = () => {
         </div>
       </section>
       {/* Values Section */}
-      <section className="py-20">
+      <section className="pt-20">
         <div className="mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -121,11 +122,14 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3">
+          <div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 min-h-[600px] bg-cover bg-center bg-no-repeat justify-center items-center"
+            style={{ backgroundImage: `url(${aboutTarget})` }}
+          >
             {values.map((value, index) => (
               <motion.div
                 key={index}
-                className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow"
+                className="text-center p-6 rounded-lg transition-all duration-300 hover:bg-gray-800/80 group cursor-pointer h-full flex flex-col justify-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -134,10 +138,10 @@ const About = () => {
                 <div className="flex justify-center mb-4">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-navy mb-3 group-hover:text-white transition-colors duration-300">
                   {value.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:text-white">
                   {value.description}
                 </p>
               </motion.div>
