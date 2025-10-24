@@ -23,7 +23,7 @@ const ProductOverview = ({ name, images, summary, keyFeatures, datasheetLink, pr
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="sticky top-24"
+            className="top-24"
           >
             <div className="rounded-2xl p-8">
               <img 
