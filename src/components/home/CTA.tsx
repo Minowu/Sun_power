@@ -27,10 +27,13 @@ const CallToAction = () => {
             Let's create something great together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group bg-teal hover:bg-teal/90 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2">
+            <a 
+              href="/contact"
+              className="group bg-teal hover:bg-teal/90 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+            >
               <span>Liên hệ ngay</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

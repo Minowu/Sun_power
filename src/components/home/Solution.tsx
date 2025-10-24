@@ -21,17 +21,20 @@ const Solutions = () => {
             {
               src: image1,
               title: "Residential String Inverter PV Solution",
-              description: "High-efficiency string inverter system for residential rooftop installations"
+              description: "High-efficiency string inverter system for residential rooftop installations",
+              slug: "residential-string-inverter-pv-solution"
             },
             {
               src: image2,
               title: "Residential ESS Solution",
-              description: "Advanced energy storage system for home backup and self-consumption"
+              description: "Advanced energy storage system for home backup and self-consumption",
+              slug: "residential-ess-solution"
             },
             {
               src: image3,
               title: "Microinverter Solution",
-              description: "Module-level power optimization for maximum energy harvest and safety"
+              description: "Module-level power optimization for maximum energy harvest and safety",
+              slug: "microinverter-solution"
             },
         ], 
       },
@@ -45,12 +48,14 @@ const Solutions = () => {
             {
               src: image4,
               title: "C&I PV Solution",
-              description: "Scalable photovoltaic systems for commercial and industrial facilities"
+              description: "Scalable photovoltaic systems for commercial and industrial facilities",
+              slug: "ci-pv-solution"
             },
             {
               src: image5,
               title: "C&I ESS Solution",
-              description: "Large-scale energy storage for peak shaving and demand response"
+              description: "Large-scale energy storage for peak shaving and demand response",
+              slug: "ci-ess-solution"
             },
         ], 
       },
@@ -64,12 +69,14 @@ const Solutions = () => {
             {
               src: image6,
               title: "Utility PV System",
-              description: "Megawatt-scale solar farms for utility grid integration"
+              description: "Megawatt-scale solar farms for utility grid integration",
+              slug: "utility-pv-system"
             },
             {
               src: image7,
               title: "Utility ESS Solution",
-              description: "Grid-scale battery storage for renewable energy stabilization"
+              description: "Grid-scale battery storage for renewable energy stabilization",
+              slug: "utility-ess-solution"
             },
         ], 
       },
@@ -136,9 +143,10 @@ const Solutions = () => {
               className="animate-fadeIn flex h-[62vh] w-full overflow-hidden shadow-md space-x-2"
             >
               {activeContent.images.map((imageData, index) => (
-                <div 
+                <a 
                   key={index} 
-                  className="flex-1 h-full transition-all duration-500 rounded-lg overflow-hidden relative group" 
+                  href={`/solutions/${imageData.slug}`}
+                  className="flex-1 h-full transition-all duration-500 rounded-lg overflow-hidden relative group block" 
                 >
                   <img 
                     src={imageData.src}
@@ -150,7 +158,7 @@ const Solutions = () => {
                     <h3 className="text-white text-3xl font-bold mb-8">{imageData.title}</h3>
                     <p className="text-white text-sm opacity-90">{imageData.description}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           )}

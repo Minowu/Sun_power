@@ -39,10 +39,13 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 2, delay: 0.4 }}
           >
-            <button className="group opacity-90 bg-yellow hover:bg-teal/90 text-navy font-semibold px-5 py-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:opacity-100 flex items-center space-x-2">
+            <a 
+              href="/solutions"
+              className="group opacity-90 bg-yellow hover:bg-teal/90 text-navy font-semibold px-5 py-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:opacity-100 flex items-center space-x-2"
+            >
               <span>Explore Solutions</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>
