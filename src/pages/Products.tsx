@@ -45,10 +45,10 @@ const Products = () => {
         backgroundImage={productHero}
       />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   
-      <div className="px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-4 gap-2 mt-2" style={{gridTemplateRows: 'auto 1000px'}}>
+      <div className="px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-4 gap-2 mt-2 max-md:grid-cols-1 max-md:gap-4 max-md:!grid-rows-[auto_auto]" style={{gridTemplateRows: 'auto 1000px'}}>
         {/* Primary Filters - Top Row (Red) */}
         <div className="relative col-span-1 col-start-1 align-bottom">
-          <h3 className="absolute bottom-0 left-5 text-black text-2xl font-semibold mb-4 ">{t(`categories.${currentCategory?.id}`)}</h3>
+          <h3 className="max-md:text-xs absolute bottom-0 left-5 text-black text-2xl font-semibold mb-4 ">{t(`categories.${currentCategory?.id}`)}</h3>
           <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>
         </div>
         <div className="mb-6 col-span-3 col-start-2">
@@ -64,7 +64,7 @@ const Products = () => {
                     setSelectedSubCategory(firstSubCategory);
                   }
                 }}
-                className={`btn-nav p-4 rounded-lg font-semibold transition-all duration-300 ${
+                className={`max-md:text-xs max-md:p-0 btn-nav p-4 rounded-lg font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'text-teal shadow-lg'
                     : 'text-black '
@@ -80,9 +80,9 @@ const Products = () => {
           </div>
         </div>
       
-        <div className="row-start-2 grid ">
+        <div className="row-start-2 grid max-md:col-span-1">
           {/* Secondary Filters - Left Column */}
-            <div className="rounded-lg p-4">
+            <div className="rounded-lg p-4 max-md:p-2">
               <div className="space-y-2">
                 {currentCategory?.subCategories
                   .filter(sub => sub !== 'all')
@@ -90,7 +90,7 @@ const Products = () => {
                     <button
                       key={subCategory}
                       onClick={() => setSelectedSubCategory(subCategory)}
-                      className={`btn-nav w-full text-left p-3 rounded-lg transition-all duration-300 ${
+                      className={`max-md:text-xs max-md:p-0 max-md:py-3 btn-nav w-full text-left p-3 rounded-lg transition-all duration-300 ${
                         selectedSubCategory === subCategory
                           ? 'text-teal'
                           : 'text-black'
@@ -103,7 +103,7 @@ const Products = () => {
             </div>
           </div>
           {/* Product Grid - Main Area (Gray) */}
-          <div className="col-span-3 row-start-2 grid grid-cols-3 gap-4">
+          <div className="col-span-3 row-start-2 grid grid-cols-3 gap-4 max-md:col-span-1 max-md:grid-cols-1 max-md:gap-2">
               {filteredProducts.map((product, index) => (
                 <motion.div
                   key={product.id}
