@@ -107,12 +107,12 @@ const Solutions = () => {
   return (
     <section className="w-screen mx-auto p-4 sm:p-6 ">
       <div className="w-screen mx-auto p-4 sm:p-6">
-          <h2 className="text-6xl font-bold text-center text-teal mb-4 mt-12">
+          <h2 className="text-6xl font-bold text-center text-teal mb-4 mt-12 max-md:text-4xl">
             {t('solution_categories.title')}
           </h2>
 
         <div className=" border-gray-200 flex justify-center">
-          <nav className="-mb-px flex space-x-18" aria-label="Tabs">
+          <nav className="-mb-px flex space-x-18 max-md:space-x-5" aria-label="Tabs">
             {mockData.map((item, index) => (
               <button
                 key={item.id}
@@ -157,9 +157,9 @@ const Solutions = () => {
                     className="w-full h-full object-cover hover:scale-125 transition-transform duration-300"
                   />
 
-                  <div className="absolute bottom-22 left-10 right-10 bg-opacity-50 p-4 rounded-lg transform translate-y-full group-hover:translate-y-10 transition-transform duration-300">
-                    <h3 className="text-white text-3xl font-bold mb-8">{imageData.title}</h3>
-                    <p className="text-white text-sm opacity-90">{imageData.description}</p>
+                  <div className="max-md:text-xs max-md:left-0 max-md:bottom-25  absolute bottom-22 left-10 right-10 bg-opacity-50 p-4 rounded-lg transform translate-y-full group-hover:translate-y-10 transition-transform duration-300">
+                    <h3 className="text-white text-3xl font-bold mb-8 max-md:text-lg">{imageData.title}</h3>
+                    <p className="max-md:hidden text-white text-sm opacity-90">{imageData.description}</p>
                   </div>
                 </a>
               ))}

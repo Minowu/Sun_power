@@ -34,7 +34,7 @@ const QualityControl = () => {
   return (
     <section className="relative w-screen h-[1000px] py-16 px-4 sm:px-6 lg:px-8 mt-10 bg-neutral-200">
     <div className="flex flex-col items-center justify-center">
-        <h2 className="text-6xl font-bold tracking-tight text-teal sm:text-5xl">
+        <h2 className="text-5xl font-bold tracking-tight text-teal  max-md:text-4xl">
         {t('quality.title')}
         </h2>
     </div>
@@ -58,7 +58,7 @@ const QualityControl = () => {
       {/* Container nội dung */}
       <div className="relative top-100 text-center">
         {/* Card Dịch vụ */}
-        <div className="mt-12 h-[280px] max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 bg-white shadow-2xl rounded-2xl border border-gray-200 md:divide-x md:divide-gray-200">
+        <div className="mt-12 h-[280px] max-w-6xl mx-auto grid grid-cols-1 grid-cols-4 bg-white shadow-2xl rounded-2xl border border-gray-200 md:divide-x md:divide-gray-200">
           {services.map((service, index) => (
             <div
               key={index}
@@ -69,8 +69,8 @@ const QualityControl = () => {
               <div className="flex-shrink-0 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center transform translate-y-7 group-hover:bg-teal-200 group-hover:translate-y-0 transition-all duration-300">
                 <img src={service.iconClass} alt={service.text} className="w-16 h-16 object-contain" />
               </div>
-                <h3 className="font-semibold text-gray-800 text-center group-hover:text-teal-600 transform translate-y-7 group-hover:translate-y-0 transition-all duration-300">{service.text}</h3>
-                <p className="text-gray-600 text-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">{service.description}</p>
+                <h3 className="font-semibold text-gray-800 text-center group-hover:text-teal-600 transform translate-y-7 group-hover:translate-y-0 transition-all duration-300 max-md:text-lg max-sm:text-xs">{service.text}</h3>
+                <p className="max-md:hidden text-gray-600 text-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">{service.description}</p>
             </div>
           ))}
         </div>

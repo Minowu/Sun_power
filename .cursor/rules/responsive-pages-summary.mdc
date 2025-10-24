@@ -1,0 +1,173 @@
+---
+description: Tổng quan về các trang và component trong dự án Sun Power để làm responsive
+globs: src/pages/**/*, src/components/**/*
+alwaysApply: true
+---
+
+# Responsive Pages Summary - Sun Power Project
+
+## Tổng Quan Cấu Trúc Trang
+
+Dự án Sun Power có **7 trang chính** với các component tương ứng:
+
+### 1. **Home Page** (`/`)
+**File**: `src/pages/Home.tsx`
+**Components**:
+- `Hero` - Hero section với video background
+- `About` - Giới thiệu công ty
+- `Solutions` - Showcase các giải pháp
+- `QualityControl` - Kiểm soát chất lượng
+- `CTA` - Call-to-action section
+
+### 2. **Products Page** (`/products`)
+**File**: `src/pages/Products.tsx`
+**Components**:
+- `PageHero` - Hero section với background image
+- **Custom Grid Layout** - Filter system với:
+  - Category filters (top row)
+  - Subcategory filters (left sidebar)
+  - Product grid (main area)
+- **Product Cards** - Hiển thị sản phẩm với image, name, description
+
+### 3. **Product Detail Page** (`/products/:id`)
+**File**: `src/pages/ProductDetail.tsx`
+**Components**:
+- `PageHero` - Hero section
+- `ProductOverview` - Tổng quan sản phẩm với image gallery
+- `ProductContent` - Chi tiết sản phẩm với features
+- **CTA Section** - Call-to-action với gradient background
+
+### 4. **About Page** (`/about`)
+**File**: `src/pages/About.tsx`
+**Components**:
+- `PageHero` - Hero section
+- **Stats Section** - Thống kê với grid layout
+- **Story Section** - Câu chuyện công ty với image
+- **Values Section** - Giá trị cốt lõi với background image
+
+### 5. **Solutions Page** (`/solutions`)
+**File**: `src/pages/Solutions.tsx`
+**Components**:
+- `PageHero` - Hero section
+- **Solutions Grid** - Hiển thị solutions theo category:
+  - Residential solutions
+  - Commercial & Industrial solutions
+  - Utility solutions
+
+### 6. **Solution Detail Page** (`/solutions/:slug`)
+**File**: `src/pages/SolutionDetail.tsx`
+**Components**:
+- `PageHero` - Hero section
+- `SolutionOverview` - Tổng quan giải pháp
+- `FeatureBlock` - Các tính năng chính
+- `SchemaFramework` - Sơ đồ framework
+
+### 7. **Contact Page** (`/contact`)
+**File**: `src/pages/Contact.tsx`
+**Components**:
+- `PageHero` - Hero section
+- **Contact Form** - Form liên hệ với validation
+- **Map Section** - Google Maps embed
+- **Services List** - Danh sách dịch vụ
+
+## Shared Components
+
+### Core Components
+- `Navbar` - Navigation bar (shared across all pages)
+- `Footer` - Footer (shared across all pages)
+- `PageHero` - Hero section component (used in most pages)
+
+### Home-specific Components (`src/components/home/`)
+- `Hero.tsx` - Hero section với video
+- `About.tsx` - About section
+- `Solution.tsx` - Solutions showcase
+- `QualityControll.tsx` - Quality control section
+- `CTA.tsx` - Call-to-action section
+
+### Product-specific Components (`src/components/product/`)
+- `ProductOverview.tsx` - Product overview với image gallery
+- `ProductContent.tsx` - Product content với features
+
+### Solution-specific Components (`src/components/solution/`)
+- `SolutionOverview.tsx` - Solution overview
+- `FeatureBlock.tsx` - Feature blocks
+- `SchemaFramework.tsx` - Schema framework
+
+## Responsive Strategy by Page
+
+### Priority Order for Responsive Implementation:
+
+1. **Home Page** - Most complex với nhiều sections
+2. **Products Page** - Complex grid layout với filters
+3. **Product Detail Page** - Image gallery và content layout
+4. **About Page** - Multiple sections với different layouts
+5. **Solutions Page** - Grid layout với categories
+6. **Solution Detail Page** - Content-heavy với schemas
+7. **Contact Page** - Form và map layout
+
+### Key Responsive Considerations:
+
+#### Mobile-First Approach:
+- Start với mobile layout (320px+)
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+
+#### Common Patterns:
+- **Grid Layouts**: `grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
+- **Text Sizing**: `text-sm md:text-base lg:text-lg`
+- **Spacing**: `p-4 md:p-6 lg:p-8`
+- **Image Handling**: `object-cover`, `object-contain`
+
+#### Complex Layouts:
+- **Products Page**: Filter sidebar → mobile dropdown
+- **Product Detail**: Image gallery → mobile carousel
+- **About Page**: Stats grid → mobile stack
+- **Contact Page**: Form + Map → mobile stack
+
+## Implementation Guidelines
+
+### 1. Start with Layout Structure
+- Identify main containers và grid systems
+- Plan mobile → tablet → desktop progression
+- Consider content hierarchy
+
+### 2. Handle Images & Media
+- Responsive images với proper sizing
+- Video backgrounds cho mobile
+- Image galleries → carousels
+
+### 3. Navigation & Interactions
+- Mobile menu patterns
+- Touch-friendly buttons
+- Swipe gestures where appropriate
+
+### 4. Content Adaptation
+- Text scaling và line heights
+- Button sizes cho touch
+- Form layouts cho mobile
+
+### 5. Performance
+- Lazy loading cho images
+- Optimize animations cho mobile
+- Consider data loading patterns
+
+## Testing Strategy
+
+### Breakpoints to Test:
+- **Mobile**: 320px, 375px, 414px
+- **Tablet**: 768px, 1024px
+- **Desktop**: 1280px, 1440px, 1920px
+
+### Key Areas:
+- Navigation functionality
+- Image scaling và loading
+- Form usability
+- Touch interactions
+- Content readability
+
+## Next Steps
+
+1. **Audit Current State**: Check existing responsive classes
+2. **Plan Mobile Layouts**: Design mobile-first approach
+3. **Implement Gradually**: Start với Home page
+4. **Test Thoroughly**: Cross-device testing
+5. **Optimize Performance**: Image optimization, lazy loading

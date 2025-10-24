@@ -1,4 +1,3 @@
-import React from 'react';
 import aboutVideo from '../../assets/about_hero.mp4';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
@@ -101,8 +100,8 @@ const About = () => {
       animate={is_inview_title ? 'visible' : 'hidden'}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -translate-y-30">
-          <h3 className="text-teal font-semibold mb-2 text-6xl">{t('about.title')}</h3>
-          <p className="text-lg text-white/90 leading-relaxed mb-6 max-w-3xl mx-auto">
+          <h3 className="text-teal font-semibold mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">{t('about.title')}</h3>
+          <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed mb-6 max-w-3xl mx-auto">
             {t('about.description')}
           </p>
         </div>
@@ -110,7 +109,7 @@ const About = () => {
       <div className="h-[90vh] relative z-100 flex items-center justify-center text-white -translate-y-50">
         <motion.div
           ref={count_ref}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-40"
+          className="mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-12 md:gap-16 lg:gap-24 xl:gap-40"
           variants={count_animate}
           initial="hidden"
           animate={is_inview ? 'visible' : 'hidden'}
@@ -118,12 +117,12 @@ const About = () => {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div
-                className="text-6xl font-bold mb-2"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
                 aria-label={`${stat.number}${stat.suffix} ${stat.label}`}
               >
                 {formatNumber(counts[index], stat.label)}
               </div>
-              <span className="text-xl font-semibold">{stat.label}</span>
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">{stat.label}</span>
             </div>
           ))}
         </motion.div>
