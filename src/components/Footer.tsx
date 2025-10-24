@@ -3,11 +3,20 @@ import logo from '../assets/logo_navbar2.png';
 
 const Footer = () => {
   const quickLinks = [
-    'About Us', 'Solutions', 'Products', 'Projects', 'News', 'Careers', 'Support'
+    { name: 'Solutions', path: '/solutions' },
+    { name: 'Products', path: '/products' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const services = [
-    'Solar Installation', 'Energy Storage', 'System Maintenance', 'Energy Consulting', 'Grid Solutions'
+    { name: 'Residential String Inverter PV Solution', path: '/solutions/residential-string-inverter-pv-solution' },
+    { name: 'Residential ESS Solution', path: '/solutions/residential-ess-solution' },
+    { name: 'Microinverter Solution', path: '/solutions/microinverter-solution' },
+    { name: 'C&I PV Solution', path: '/solutions/ci-pv-solution' },
+    { name: 'C&I ESS Solution', path: '/solutions/ci-ess-solution' },
+    { name: 'Utility PV System', path: '/solutions/utility-pv-system' },
+    { name: 'Utility ESS Solution', path: '/solutions/utility-ess-solution' }
   ];
 
   return (
@@ -48,12 +57,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
-                <li key={link}>
+                <li key={link.name}>
                   <a 
-                    href={`#${link.toLowerCase().replace(' ', '-')}`}
+                    href={link.path}
                     className="text-gray-300 hover:text-teal transition-colors"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 </li>
               ))}
@@ -65,12 +74,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
-                <li key={service}>
+                <li key={service.name}>
                   <a 
-                    href="#"
+                    href={service.path}
                     className="text-gray-300 hover:text-teal transition-colors"
                   >
-                    {service}
+                    {service.name}
                   </a>
                 </li>
               ))}
