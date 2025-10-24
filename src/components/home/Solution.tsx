@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import image1 from '../../assets/solution_1.jpg';
 import image2 from '../../assets/solution_2.jpg';
 import image3 from '../../assets/solution_3.jpg';
@@ -11,29 +12,31 @@ import icon2 from '../../assets/icon_solution_2.png';
 import icon3 from '../../assets/icon_solution_3.png';
 
 const Solutions = () => {
+  const { t } = useTranslation('home');
+  
   const mockData = [
     {
       id: 1,
       icon: icon1,
-      title: "Residential System",
+      title: t('solution_categories.residential'),
       content: {
         images: [
             {
               src: image1,
-              title: "Residential String Inverter PV Solution",
-              description: "High-efficiency string inverter system for residential rooftop installations",
+              title: t('detailed_solutions.residential_string_inverter_pv_solution.title'),
+              description: t('detailed_solutions.residential_string_inverter_pv_solution.description'),
               slug: "residential-string-inverter-pv-solution"
             },
             {
               src: image2,
-              title: "Residential ESS Solution",
-              description: "Advanced energy storage system for home backup and self-consumption",
+              title: t('detailed_solutions.residential_ess_solution.title'),
+              description: t('detailed_solutions.residential_ess_solution.description'),
               slug: "residential-ess-solution"
             },
             {
               src: image3,
-              title: "Microinverter Solution",
-              description: "Module-level power optimization for maximum energy harvest and safety",
+              title: t('detailed_solutions.microinverter_solution.title'),
+              description: t('detailed_solutions.microinverter_solution.description'),
               slug: "microinverter-solution"
             },
         ], 
@@ -42,19 +45,19 @@ const Solutions = () => {
     {
       id: 2,
       icon: icon2,
-      title: "C&I System",
+      title: t('solution_categories.commercial'),
       content: {
         images: [
             {
               src: image4,
-              title: "C&I PV Solution",
-              description: "Scalable photovoltaic systems for commercial and industrial facilities",
+              title: t('detailed_solutions.ci_pv_solution.title'),
+              description: t('detailed_solutions.ci_pv_solution.description'),
               slug: "ci-pv-solution"
             },
             {
               src: image5,
-              title: "C&I ESS Solution",
-              description: "Large-scale energy storage for peak shaving and demand response",
+              title: t('detailed_solutions.ci_ess_solution.title'),
+              description: t('detailed_solutions.ci_ess_solution.description'),
               slug: "ci-ess-solution"
             },
         ], 
@@ -63,19 +66,19 @@ const Solutions = () => {
     {
       id: 3,
       icon: icon3,
-      title: "Utility-Scale System",
+      title: t('solution_categories.utility'),
       content: {
         images: [
             {
               src: image6,
-              title: "Utility PV System",
-              description: "Megawatt-scale solar farms for utility grid integration",
+              title: t('detailed_solutions.utility_pv_system.title'),
+              description: t('detailed_solutions.utility_pv_system.description'),
               slug: "utility-pv-system"
             },
             {
               src: image7,
-              title: "Utility ESS Solution",
-              description: "Grid-scale battery storage for renewable energy stabilization",
+              title: t('detailed_solutions.utility_ess_solution.title'),
+              description: t('detailed_solutions.utility_ess_solution.description'),
               slug: "utility-ess-solution"
             },
         ], 
@@ -105,7 +108,7 @@ const Solutions = () => {
     <section className="w-screen mx-auto p-4 sm:p-6 ">
       <div className="w-screen mx-auto p-4 sm:p-6">
           <h2 className="text-6xl font-bold text-center text-teal mb-4 mt-12">
-            Solutions
+            {t('solution_categories.title')}
           </h2>
 
         <div className=" border-gray-200 flex justify-center">

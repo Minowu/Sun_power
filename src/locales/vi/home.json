@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Năng Lượng Sạch",
+    "subtitle": "Tương Lai Bền Vững",
+    "cta": "Khám Phá Giải Pháp"
+  },
+  "about": {
+    "title": "Về Chúng Tôi",
+    "description": "Dẫn đầu cuộc cách mạng năng lượng tái tạo với các giải pháp năng lượng mặt trời sáng tạo"
+  },
+  "solution_categories": {
+    "title": "Giải Pháp",
+    "residential": "Hệ Thống Dân Cư",
+    "commercial": "Hệ Thống Thương Mại",
+    "utility": "Hệ Thống Quy Mô Lớn"
+  },
+  "detailed_solutions": {
+    "residential_string_inverter_pv_solution": {
+      "title": "Giải Pháp Inverter String Dân Cư",
+      "description": "Hệ thống inverter string hiệu suất cao cho lắp đặt mái nhà dân cư"
+    },
+    "residential_ess_solution": {
+      "title": "Giải Pháp ESS Dân Cư",
+      "description": "Hệ thống lưu trữ năng lượng tiên tiến cho dự phòng và tự tiêu thụ tại nhà"
+    },
+    "microinverter_solution": {
+      "title": "Giải Pháp Microinverter",
+      "description": "Tối ưu hóa năng lượng cấp module để thu hoạch năng lượng tối đa và an toàn"
+    },
+    "ci_pv_solution": {
+      "title": "Giải Pháp PV Thương Mại & Công Nghiệp",
+      "description": "Hệ thống quang điện có thể mở rộng cho các cơ sở thương mại và công nghiệp"
+    },
+    "ci_ess_solution": {
+      "title": "Giải Pháp ESS Thương Mại & Công Nghiệp",
+      "description": "Lưu trữ năng lượng quy mô lớn cho cắt giảm đỉnh và phản ứng nhu cầu"
+    },
+    "utility_pv_system": {
+      "title": "Hệ Thống PV Tiện Ích",
+      "description": "Trang trại năng lượng mặt trời quy mô megawatt để tích hợp lưới tiện ích"
+    },
+    "utility_ess_solution": {
+      "title": "Giải Pháp ESS Tiện Ích",
+      "description": "Lưu trữ pin quy mô lưới để ổn định năng lượng tái tạo"
+    }
+  },
+  "stats": {
+    "projects": "Dự án hoàn thành",
+    "clients": "Khách hàng tin tưởng",
+    "experience": "Năm kinh nghiệm",
+    "support": "Hỗ trợ khách hàng"
+  },
+  "cta": {
+    "title": "Hãy Kết Nối",
+    "subtitle": "Hãy cùng tạo ra điều gì đó tuyệt vời.",
+    "button": "Liên hệ ngay"
+  },
+  "quality": {
+    "title": "Kiểm Soát Chất Lượng",
+    "subtitle": "Chất Lượng Sản Phẩm Tạo Niềm Tin",
+    "description": "Sự chính trực và đáng tin cậy là huyết mạch của sự phát triển doanh nghiệp, và chiến thắng bằng chất lượng là bí quyết của Trinasolar để trở thành nhà sản xuất sản phẩm quang điện và nhà cung cấp giải pháp hàng đầu thế giới.",
+    "button": "Tìm hiểu thêm",
+    "services": {
+      "control": {
+        "title": "Kiểm soát chất lượng nghiêm ngặt",
+        "description": "Chúng tôi đảm bảo rằng tất cả sản phẩm đáp ứng các tiêu chuẩn chất lượng cao nhất để đảm bảo độ tin cậy và an toàn."
+      },
+      "assurance": {
+        "title": "Đảm bảo chất lượng hàng đầu ngành",
+        "description": "Các quy trình đảm bảo chất lượng của chúng tôi được thiết kế để đáp ứng các yêu cầu nghiêm ngặt nhất của ngành."
+      },
+      "testing": {
+        "title": "Phòng thí nghiệm kiểm tra đẳng cấp thế giới",
+        "description": "Các phòng thí nghiệm kiểm tra của chúng tôi được trang bị công nghệ mới nhất để đảm bảo kết quả chính xác và đáng tin cậy."
+      },
+      "digitalization": {
+        "title": "Số hóa Quản lý Chất lượng Tổng thể",
+        "description": "Chúng tôi đã triển khai các công cụ kỹ thuật số để hợp lý hóa các quy trình quản lý chất lượng và cải thiện hiệu quả."
+      }
+    }
+  }
+}

@@ -1,22 +1,19 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero';
 import { solutionsData } from '../data/solutions';
-import aboutHero from '../assets/about_hero.jpg';
-
-const categoryLabels = {
-  residential: 'Residential',
-  ci: 'C&I',
-  utility: 'Utility'
-};
+import solutionHero from '../assets/solution_hero.jpg';
 
 const Solutions = () => {
+  const { t } = useTranslation('solutions');
+  
   return (
     <div className="min-h-screen bg-white">
       <PageHero 
-        title="Giải Pháp"
-        subtitle="Giải pháp năng lượng mặt trời toàn diện cho mọi nhu cầu"
-        backgroundImage={aboutHero}
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
+        backgroundImage={solutionHero}
       />
 
       {/* Solutions by Category */}
@@ -36,7 +33,7 @@ const Solutions = () => {
               >
                 <div className="flex items-center mb-8">
                   <h2 className="text-3xl font-bold text-navy mr-4">
-                    {categoryLabels[category]}
+                    {t(`categories.${category}`)}
                   </h2>
                   <div className="flex-1 h-0.5 bg-teal-500"></div>
                 </div>
@@ -54,11 +51,11 @@ const Solutions = () => {
                         <div className="bg-white rounded-lg shadow-lg p-6 h-[300px]">
                           <img 
                             src={solution.overview.image} 
-                            alt={solution.overview.title}
+                            alt={t(`solutions.${solution.slug}.title`, solution.overview.title)}
                             className="w-full h-48 object-cover rounded-lg mb-4 img-hover"
                           />
                           <h3 className="text-xl font-bold text-navy mb-2">
-                            {solution.overview.title}
+                            {t(`solutions.${solution.slug}.title`, solution.overview.title)}
                           </h3>
                         </div>
                       </Link>

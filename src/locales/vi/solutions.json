@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Giải Pháp",
+    "subtitle": "Giải pháp năng lượng mặt trời toàn diện cho mọi nhu cầu"
+  },
+  "categories": {
+    "residential": "Dân Cư",
+    "ci": "Thương Mại & Công Nghiệp",
+    "utility": "Tiện Ích"
+  },
+  "solutions": {
+    "residential_string_inverter_pv_solution": {
+      "title": "Giải Pháp PV Inverter String Dân Cư",
+      "description": "Hệ thống inverter string hiệu suất cao cho lắp đặt mái nhà dân cư"
+    },
+    "residential_ess_solution": {
+      "title": "Giải Pháp ESS Dân Cư",
+      "description": "Hệ thống lưu trữ năng lượng tiên tiến cho dự phòng và tự tiêu thụ tại nhà"
+    },
+    "microinverter_solution": {
+      "title": "Giải Pháp Microinverter",
+      "description": "Tối ưu hóa năng lượng cấp module để thu hoạch năng lượng tối đa và an toàn"
+    },
+    "ci_pv_solution": {
+      "title": "Giải Pháp PV C&I",
+      "description": "Hệ thống quang điện có thể mở rộng cho các cơ sở thương mại và công nghiệp"
+    },
+    "ci_ess_solution": {
+      "title": "Giải Pháp ESS C&I",
+      "description": "Lưu trữ năng lượng quy mô lớn cho cắt giảm đỉnh và phản ứng nhu cầu"
+    },
+    "utility_pv_system": {
+      "title": "Hệ Thống PV Tiện Ích",
+      "description": "Trang trại năng lượng mặt trời quy mô megawatt để tích hợp lưới tiện ích"
+    },
+    "utility_ess_solution": {
+      "title": "Giải Pháp ESS Tiện Ích",
+      "description": "Lưu trữ pin quy mô lưới để ổn định năng lượng tái tạo"
+    }
+  }
+}

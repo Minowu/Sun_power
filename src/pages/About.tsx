@@ -1,41 +1,44 @@
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero';
 import aboutHero from '../assets/about_hero.jpg';
 import aboutImage from '../assets/aboutImage.png';
 import aboutTarget from '../assets/about.png';
 
 const About = () => {
+  const { t } = useTranslation('about');
+  
   const stats = [
-    { number: '50+', label: 'Dự án hoàn thành' },
-    { number: '15+', label: 'Khách hàng tin tưởng' },
-    { number: '5+', label: 'Năm kinh nghiệm' },
-    { number: '24/7', label: 'Hỗ trợ khách hàng' }
+    { number: '50+', label: t('stats.projects') },
+    { number: '15+', label: t('stats.clients') },
+    { number: '5+', label: t('stats.experience') },
+    { number: '24/7', label: t('stats.support') }
   ];
 
   const values = [
     {
       icon: <Target className="h-8 w-8 text-teal-500" />,
-      title: 'Tầm nhìn',
-      description: 'Trở thành công ty hàng đầu về giải pháp năng lượng mặt trời tại Việt Nam'
+      title: t('values.vision.title'),
+      description: t('values.vision.description')
     },
     {
       icon: <Users className="h-8 w-8 text-teal-500" />,
-      title: 'Sứ mệnh',
-      description: 'Mang đến giải pháp năng lượng sạch, tiết kiệm và bền vững cho mọi gia đình'
+      title: t('values.mission.title'),
+      description: t('values.mission.description')
     },
     {
       icon: <Award className="h-8 w-8 text-teal-500" />,
-      title: 'Giá trị cốt lõi',
-      description: 'Chất lượng, uy tín, sáng tạo và cam kết phục vụ khách hàng tốt nhất'
+      title: t('values.core_values.title'),
+      description: t('values.core_values.description')
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <PageHero 
-        title="Về Chúng Tôi"
-        subtitle="Sun Power - Đối tác tin cậy trong lĩnh vực năng lượng mặt trời"
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
         backgroundImage={aboutHero}
       />
 
@@ -74,19 +77,16 @@ const About = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-                Về Thadorobot Energy
+                {t('story.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Thadorobot Energy được thành lập với niềm tin rằng năng lượng mặt trời không chỉ là giải pháp 
-                tiết kiệm chi phí mà còn là cách để bảo vệ môi trường cho thế hệ tương lai.
+                {t('story.paragraph1')}
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Với đội ngũ kỹ sư giàu kinh nghiệm và công nghệ tiên tiến, chúng tôi cam kết mang đến 
-                những giải pháp năng lượng mặt trời chất lượng cao, phù hợp với nhu cầu của từng khách hàng.
+                {t('story.paragraph2')}
               </p>
               <p className="text-lg text-gray-600">
-                Từ những dự án nhỏ lẻ đến các hệ thống quy mô lớn, chúng tôi luôn đặt chất lượng và 
-                sự hài lòng của khách hàng lên hàng đầu.
+                {t('story.paragraph3')}
               </p>
             </motion.div>
             
@@ -115,10 +115,10 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-              Giá Trị Cốt Lõi
+              {t('values.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Những nguyên tắc và giá trị định hướng mọi hoạt động của chúng tôi
+              {t('values.subtitle')}
             </p>
           </motion.div>
 

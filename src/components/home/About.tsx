@@ -3,6 +3,7 @@ import aboutVideo from '../../assets/about_hero.mp4';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 // Định nghĩa interface cho stat
 interface Stat {
@@ -12,11 +13,12 @@ interface Stat {
 }
 
 const About = () => {
+  const { t } = useTranslation('home');
   const stats: Stat[] = [
-    { number: 500, suffix: '+', label: 'MW Installed' },
-    { number: 50000, suffix: '+', label: 'Happy Customers' },
-    { number: 15, suffix: '+', label: 'Years Experience' },
-    { number: 98, suffix: '%', label: 'Efficiency Rate' },
+    { number: 500, suffix: '+', label: t('stats.projects') },
+    { number: 50000, suffix: '+', label: t('stats.clients') },
+    { number: 15, suffix: '+', label: t('stats.experience') },
+    { number: 98, suffix: '%', label: t('stats.support') },
   ];
   const title_ref = useRef(null);
   const count_ref = useRef(null);
@@ -31,7 +33,7 @@ const About = () => {
     const stat = stats.find((stat) => stat.label === label);
     if (!stat) return `${Math.floor(value)}`; // Giá trị mặc định nếu không tìm thấy
 
-    if (label === 'Happy Customers') {
+    if (label === t('stats.clients')) {
       return `${Math.floor(value / 1000)}k${stat.suffix}`;
     }
     return `${Math.floor(value)}${stat.suffix}`;
@@ -99,11 +101,9 @@ const About = () => {
       animate={is_inview_title ? 'visible' : 'hidden'}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -translate-y-30">
-          <h3 className="text-teal font-semibold mb-2 text-6xl">About Thadorobot</h3>
+          <h3 className="text-teal font-semibold mb-2 text-6xl">{t('about.title')}</h3>
           <p className="text-lg text-white/90 leading-relaxed mb-6 max-w-3xl mx-auto">
-            Since 2020, Thadorobot has been at the forefront of the renewable energy
-            revolution. We design, manufacture, and deploy cutting-edge solar solutions
-            that power businesses and communities worldwide.
+            {t('about.description')}
           </p>
         </div>
       </motion.div>

@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Solutions",
+    "subtitle": "Comprehensive solar energy solutions for every need"
+  },
+  "categories": {
+    "residential": "Residential",
+    "ci": "Commercial & Industrial",
+    "utility": "Utility"
+  },
+  "solutions": {
+    "residential_string_inverter_pv_solution": {
+      "title": "Residential String Inverter PV Solution",
+      "description": "High-efficiency string inverter system for residential rooftop installations"
+    },
+    "residential_ess_solution": {
+      "title": "Residential ESS Solution",
+      "description": "Advanced energy storage system for home backup and self-consumption"
+    },
+    "microinverter_solution": {
+      "title": "Microinverter Solution",
+      "description": "Module-level power optimization for maximum energy harvest and safety"
+    },
+    "ci_pv_solution": {
+      "title": "C&I PV Solution",
+      "description": "Scalable photovoltaic systems for commercial and industrial facilities"
+    },
+    "ci_ess_solution": {
+      "title": "C&I ESS Solution",
+      "description": "Large-scale energy storage for peak shaving and demand response"
+    },
+    "utility_pv_system": {
+      "title": "Utility PV System",
+      "description": "Megawatt-scale solar farms for utility grid integration"
+    },
+    "utility_ess_solution": {
+      "title": "Utility ESS Solution",
+      "description": "Grid-scale battery storage for renewable energy stabilization"
+    }
+  }
+}

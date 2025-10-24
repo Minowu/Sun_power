@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "About Us",
+    "subtitle": "Sun Power - Your trusted partner in solar energy"
+  },
+  "stats": {
+    "projects": "Completed Projects",
+    "clients": "Trusted Clients",
+    "experience": "Years Experience",
+    "support": "Customer Support"
+  },
+  "story": {
+    "title": "About Thadorobot Energy",
+    "paragraph1": "Thadorobot Energy was founded with the belief that solar energy is not only a cost-saving solution but also a way to protect the environment for future generations.",
+    "paragraph2": "With our experienced engineering team and advanced technology, we are committed to delivering high-quality solar energy solutions tailored to each customer's needs.",
+    "paragraph3": "From small-scale projects to large-scale systems, we always prioritize quality and customer satisfaction."
+  },
+  "values": {
+    "title": "Core Values",
+    "subtitle": "The principles and values that guide all our activities",
+    "vision": {
+      "title": "Vision",
+      "description": "To become the leading company in solar energy solutions in Vietnam"
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "To provide clean, economical and sustainable energy solutions for every household"
+    },
+    "core_values": {
+      "title": "Core Values",
+      "description": "Quality, integrity, innovation and commitment to serve customers best"
+    }
+  }
+}

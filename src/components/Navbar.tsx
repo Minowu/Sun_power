@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import logo1 from '../assets/logo_navbar1.png';
 import logo2 from '../assets/logo_navbar2.png';
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation('navbar');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [language, setLanguage] = useState('vi'); // 'vi' hoặc 'en'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,15 +21,15 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Products', path: '/products' },
-    { name: 'Solutions', path: '/solutions' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: t('home'), path: '/' },
+    { name: t('products'), path: '/products' },
+    { name: t('solutions'), path: '/solutions' },
+    { name: t('about'), path: '/about' },
+    { name: t('contact'), path: '/contact' }
   ];
 
   const toggleLanguage = () => {
-    setLanguage(language === 'vi' ? 'en' : 'vi');
+    i18n.changeLanguage(i18n.language === 'vi' ? 'en' : 'vi');
   };
 
   return (
@@ -70,10 +71,10 @@ const Navbar = () => {
               className={`flex items-center space-x-2 font-light transition-colors hover:text-teal-500 px-3 py-2 rounded-lg hover:bg-white/10 ${
                 isScrolled || isHovered ? 'text-navy' : 'text-white'
               }`}
-              title={`Chuyển sang ${language === 'vi' ? 'English' : 'Tiếng Việt'}`}
+              title={t('language.switch')}
             >
               <Globe className="h-4 w-4" />
-              <span className="text-sm font-medium">{language.toUpperCase()}</span>
+              <span className="text-sm font-medium">{t('language.current')}</span>
             </button>
           </div>
 
@@ -114,7 +115,7 @@ const Navbar = () => {
                 className="flex items-center space-x-2 text-navy font-medium hover:text-teal-500 transition-colors mt-2 pt-2 border-t border-gray-200"
               >
                 <Globe className="h-4 w-4" />
-                <span>Chuyển sang {language === 'vi' ? 'English' : 'Tiếng Việt'}</span>
+                <span>{t('language.switch')}</span>
               </button>
             </nav>
           </div>

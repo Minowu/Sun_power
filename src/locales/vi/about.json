@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Về Chúng Tôi",
+    "subtitle": "Sun Power - Đối tác tin cậy trong lĩnh vực năng lượng mặt trời"
+  },
+  "stats": {
+    "projects": "Dự án hoàn thành",
+    "clients": "Khách hàng tin tưởng",
+    "experience": "Năm kinh nghiệm",
+    "support": "Hỗ trợ khách hàng"
+  },
+  "story": {
+    "title": "Về Thadorobot Energy",
+    "paragraph1": "Thadorobot Energy được thành lập với niềm tin rằng năng lượng mặt trời không chỉ là giải pháp tiết kiệm chi phí mà còn là cách để bảo vệ môi trường cho thế hệ tương lai.",
+    "paragraph2": "Với đội ngũ kỹ sư giàu kinh nghiệm và công nghệ tiên tiến, chúng tôi cam kết mang đến những giải pháp năng lượng mặt trời chất lượng cao, phù hợp với nhu cầu của từng khách hàng.",
+    "paragraph3": "Từ những dự án nhỏ lẻ đến các hệ thống quy mô lớn, chúng tôi luôn đặt chất lượng và sự hài lòng của khách hàng lên hàng đầu."
+  },
+  "values": {
+    "title": "Giá Trị Cốt Lõi",
+    "subtitle": "Những nguyên tắc và giá trị định hướng mọi hoạt động của chúng tôi",
+    "vision": {
+      "title": "Tầm nhìn",
+      "description": "Trở thành công ty hàng đầu về giải pháp năng lượng mặt trời tại Việt Nam"
+    },
+    "mission": {
+      "title": "Sứ mệnh",
+      "description": "Mang đến giải pháp năng lượng sạch, tiết kiệm và bền vững cho mọi gia đình"
+    },
+    "core_values": {
+      "title": "Giá trị cốt lõi",
+      "description": "Chất lượng, uy tín, sáng tạo và cam kết phục vụ khách hàng tốt nhất"
+    }
+  }
+}

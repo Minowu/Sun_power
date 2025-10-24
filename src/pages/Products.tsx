@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero';
-import aboutHero from '../assets/about_hero.jpg';
+import productHero from '../assets/product_hero.jpg';
 import { products, categories } from '../data/products';
 
 const Products = () => {
+  const { t } = useTranslation('products');
   const [selectedCategory, setSelectedCategory] = useState<string>('inverter');
   const [selectedSubCategory, setSelectedSubCategory] = useState<string>('');
 
@@ -38,15 +40,15 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <PageHero 
-        title="Sản Phẩm"
-        subtitle="Khám phá các sản phẩm năng lượng mặt trời chất lượng cao"
-        backgroundImage={aboutHero}
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
+        backgroundImage={productHero}
       />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   
       <div className="px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-4 gap-2 mt-2" style={{gridTemplateRows: 'auto 1000px'}}>
         {/* Primary Filters - Top Row (Red) */}
         <div className="relative col-span-1 col-start-1 align-bottom">
-          <h3 className="absolute bottom-0 left-5 text-black text-2xl font-semibold mb-4 ">{currentCategory?.name}</h3>
+          <h3 className="absolute bottom-0 left-5 text-black text-2xl font-semibold mb-4 ">{t(`categories.${currentCategory?.id}`)}</h3>
           <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>
         </div>
         <div className="mb-6 col-span-3 col-start-2">
@@ -71,7 +73,7 @@ const Products = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="text-center">
-                  {category.name}
+                  {t(`categories.${category.id}`)}
                 </div>
               </motion.button>
             ))}
@@ -94,24 +96,12 @@ const Products = () => {
                           : 'text-black'
                       }`}
                     >
-                      {subCategory === 'hybrid' && 'Hybrid Inverter'}
-                      {subCategory === 'microinverter' && 'Microinverter'}
-                      {subCategory === 'string' && 'String Inverter'}
-                      {subCategory === 'batteries' && 'Pin lưu trữ'}
-                      {subCategory === 'all_in_one' && 'All-in-one ESS'}
-                      {subCategory === 'ci_ess' && 'C&I ESS'}
-                      {subCategory === 'container' && 'Container ESS'}
-                      {subCategory === 'controllers' && 'Bộ điều khiển'}
-                      {subCategory === 'loggers' && 'Thiết bị ghi dữ liệu'}
-                      {subCategory === 'communication' && 'Hệ thống truyền thông'}
-                      {subCategory === 'cloud_platform' && 'Nền tảng đám mây'}
+                      {t(`subcategories.${subCategory}`)}
                     </button>
                   ))}
               </div>
             </div>
           </div>
-
-          <div className="mt-5 w-full h-0.5 bg-black"></div>
           {/* Product Grid - Main Area (Gray) */}
           <div className="col-span-3 row-start-2 grid grid-cols-3 gap-4">
               {filteredProducts.map((product, index) => (
@@ -131,15 +121,15 @@ const Products = () => {
                           <div className="h-48 flex items-center justify-center mb-4">
                             <img 
                               src={product.image} 
-                              alt={product.name} 
+                              alt={t(`products.${product.id}.name`, product.name)} 
                               className="h-40 w-auto object-contain img-hover"
                             />
                           </div>
                           <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
-                            {currentCategory?.name}
+                            {t(`categories.${currentCategory?.id}`)}
                           </div>
-                          <h3 className="text-lg font-bold text-gray-900 mb-2">{product.name}</h3>
-                          <p className="text-gray-600 text-sm">{product.description}</p>
+                          <h3 className="text-lg font-bold text-gray-900 mb-2">{t(`products.${product.id}.name`, product.name)}</h3>
+                          <p className="text-gray-600 text-sm">{t(`products.${product.id}.description`, product.description)}</p>
                         </div>
                       </div>
                     </Link>
@@ -150,15 +140,15 @@ const Products = () => {
                           <div className="h-48 flex items-center justify-center mb-4">
                             <img 
                               src={product.image} 
-                              alt={product.name} 
+                              alt={t(`products.${product.id}.name`, product.name)} 
                               className="h-40 w-auto object-contain img-hover"
                             />
                           </div>
                           <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
-                            {currentCategory?.name}
+                            {t(`categories.${currentCategory?.id}`)}
                           </div>
-                          <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
-                          <p className="text-gray-600 text-sm">{product.description}</p>
+                          <h3 className="text-xl font-bold text-gray-900 mb-2">{t(`products.${product.id}.name`, product.name)}</h3>
+                          <p className="text-gray-600 text-sm">{t(`products.${product.id}.description`, product.description)}</p>
                         </div>
                       </div>
                     </div>
@@ -169,8 +159,8 @@ const Products = () => {
 
             {filteredProducts.length === 0 && (
               <div className="text-center py-12">
-                <div className="text-gray-500 text-lg">Không tìm thấy sản phẩm nào</div>
-                <p className="text-gray-400 mt-2">Vui lòng thử chọn danh mục khác</p>
+                <div className="text-gray-500 text-lg">{t('messages.no_products')}</div>
+                <p className="text-gray-400 mt-2">{t('messages.try_other_category')}</p>
               </div>
             )}
           </div>

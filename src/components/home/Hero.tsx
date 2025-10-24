@@ -1,8 +1,10 @@
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import heroVideo from '../../assets/hero_video.mp4';
 
 const Hero = () => {
+  const { t } = useTranslation('home');
 
   return (
     <section className="relative h-[105vh] flex items-center justify-left overflow-hidden">
@@ -26,10 +28,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Clean Energy for 
+            {t('hero.title')}
             <br />
             <span className="text-xl md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-yellow bg-gradient-to-r from-yellow to-yellow/80 bg-clip-text text-transparent">
-              Sustainable Future
+              {t('hero.subtitle')}
             </span>
           </motion.h1>
           
@@ -43,7 +45,7 @@ const Hero = () => {
               href="/solutions"
               className="group opacity-90 bg-yellow hover:bg-teal/90 text-navy font-semibold px-5 py-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:opacity-100 flex items-center space-x-2"
             >
-              <span>Explore Solutions</span>
+              <span>{t('hero.cta')}</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>

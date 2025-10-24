@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { MapPin, Send, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero';
-import aboutHero from '../assets/about_hero.jpg';
+import contactHero from '../assets/contact_hero.jpg';
 
 const Contact = () => {
+  const { t } = useTranslation('contact');
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,20 +35,14 @@ const Contact = () => {
   };
 
 
-  const services = [
-    'Tư vấn hệ thống điện mặt trời',
-    'Khảo sát và thiết kế',
-    'Lắp đặt chuyên nghiệp',
-    'Bảo trì và sửa chữa',
-    'Hỗ trợ kỹ thuật 24/7'
-  ];
+  const services = t('services.list', { returnObjects: true }) as string[];
 
   return (
     <div className="min-h-screen bg-white">
       <PageHero 
-        title="Liên Hệ"
-        subtitle="Chúng tôi sẵn sàng hỗ trợ và tư vấn cho bạn"
-        backgroundImage={aboutHero}
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
+        backgroundImage={contactHero}
       />
 
       {/* Contact Form & Map Section */}
@@ -60,10 +57,10 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <h3 className="text-3xl font-bold text-navy mb-6">
-                Gửi Tin Nhắn
+                {t('form.title')}
               </h3>
               <p className="text-gray-600 mb-8">
-                Điền thông tin bên dưới và chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.
+                {t('form.description')}
               </p>
 
               {isSubmitted ? (
@@ -75,10 +72,10 @@ const Contact = () => {
                 >
                   <CheckCircle className="h-12 w-12 text-green-500 mx-auto mb-4" />
                   <h4 className="text-xl font-semibold text-green-800 mb-2">
-                    Cảm ơn bạn!
+                    {t('form.success.title')}
                   </h4>
                   <p className="text-green-600">
-                    Tin nhắn đã được gửi thành công. Chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể.
+                    {t('form.success.message')}
                   </p>
                 </motion.div>
               ) : (
@@ -86,7 +83,7 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Họ và tên *
+                        {t('form.fields.name.label')} *
                       </label>
                       <input
                         type="text"
@@ -95,12 +92,12 @@ const Contact = () => {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                        placeholder="Nhập họ và tên"
+                        placeholder={t('form.fields.name.placeholder')}
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email *
+                        {t('form.fields.email.label')} *
                       </label>
                       <input
                         type="email"
@@ -109,7 +106,7 @@ const Contact = () => {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                        placeholder="Nhập email"
+                        placeholder={t('form.fields.email.placeholder')}
                       />
                     </div>
                   </div>
@@ -117,7 +114,7 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Số điện thoại
+                        {t('form.fields.phone.label')}
                       </label>
                       <input
                         type="tel"
@@ -125,12 +122,12 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                        placeholder="Nhập số điện thoại"
+                        placeholder={t('form.fields.phone.placeholder')}
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Chủ đề
+                        {t('form.fields.subject.label')}
                       </label>
                       <select
                         name="subject"
@@ -138,19 +135,19 @@ const Contact = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       >
-                        <option value="">Chọn chủ đề</option>
-                        <option value="tu-van">Tư vấn hệ thống</option>
-                        <option value="bao-gia">Báo giá</option>
-                        <option value="lap-dat">Lắp đặt</option>
-                        <option value="bao-tri">Bảo trì</option>
-                        <option value="khac">Khác</option>
+                        <option value="">{t('form.fields.subject.placeholder')}</option>
+                        <option value="tu-van">{t('form.fields.subject.options.consultation')}</option>
+                        <option value="bao-gia">{t('form.fields.subject.options.quotation')}</option>
+                        <option value="lap-dat">{t('form.fields.subject.options.installation')}</option>
+                        <option value="bao-tri">{t('form.fields.subject.options.maintenance')}</option>
+                        <option value="khac">{t('form.fields.subject.options.other')}</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Tin nhắn *
+                      {t('form.fields.message.label')} *
                     </label>
                     <textarea
                       name="message"
@@ -159,7 +156,7 @@ const Contact = () => {
                       required
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                      placeholder="Nhập tin nhắn của bạn..."
+                      placeholder={t('form.fields.message.placeholder')}
                     />
                   </div>
 
@@ -168,7 +165,7 @@ const Contact = () => {
                     className="w-full bg-teal-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-teal-600 transition-colors flex items-center justify-center"
                   >
                     <Send className="h-5 w-5 mr-2" />
-                    Gửi tin nhắn
+                    {t('form.submit')}
                   </button>
                 </form>
               )}
@@ -181,16 +178,27 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-gray-200 h-96 rounded-lg mb-8 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <MapPin className="h-12 w-12 mx-auto mb-4" />
-                  <p className="text-lg">Bản đồ sẽ được hiển thị tại đây</p>
+              <div className="mb-8">
+                <h4 className="text-xl font-bold text-navy mb-4">
+                  {t('map.title')}
+                </h4>
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.938354898863!2d105.76777698590047!3d21.035152437593506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345537593bdc4f%3A0x27d693f129afce58!2sSPTECH%20-%20THADOSOFT%20CORP!5e0!3m2!1svi!2s!4v1761271340927!5m2!1svi!2s" 
+                    width="100%" 
+                    height="400" 
+                    style={{border: 0}} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="SPTECH - THADOSOFT CORP Location"
+                  />
                 </div>
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-navy mb-4">
-                  Dịch Vụ Của Chúng Tôi
+                  {t('services.title')}
                 </h4>
                 <ul className="space-y-3">
                   {services.map((service, index) => (

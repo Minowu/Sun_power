@@ -1,22 +1,25 @@
-import {Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import {Mail, Phone, MapPin, Facebook, Youtube } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/logo_navbar2.png';
 
 const Footer = () => {
+  const { t } = useTranslation('footer');
+  
   const quickLinks = [
-    { name: 'Solutions', path: '/solutions' },
-    { name: 'Products', path: '/products' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: t('quick_links.solutions'), path: '/solutions' },
+    { name: t('quick_links.products'), path: '/products' },
+    { name: t('quick_links.about'), path: '/about' },
+    { name: t('quick_links.contact'), path: '/contact' }
   ];
 
   const services = [
-    { name: 'Residential String Inverter PV Solution', path: '/solutions/residential-string-inverter-pv-solution' },
-    { name: 'Residential ESS Solution', path: '/solutions/residential-ess-solution' },
-    { name: 'Microinverter Solution', path: '/solutions/microinverter-solution' },
-    { name: 'C&I PV Solution', path: '/solutions/ci-pv-solution' },
-    { name: 'C&I ESS Solution', path: '/solutions/ci-ess-solution' },
-    { name: 'Utility PV System', path: '/solutions/utility-pv-system' },
-    { name: 'Utility ESS Solution', path: '/solutions/utility-ess-solution' }
+    { name: t('services.residential_string'), path: '/solutions/residential-string-inverter-pv-solution' },
+    { name: t('services.residential_ess'), path: '/solutions/residential-ess-solution' },
+    { name: t('services.microinverter'), path: '/solutions/microinverter-solution' },
+    { name: t('services.ci_pv'), path: '/solutions/ci-pv-solution' },
+    { name: t('services.ci_ess'), path: '/solutions/ci-ess-solution' },
+    { name: t('services.utility_pv'), path: '/solutions/utility-pv-system' },
+    { name: t('services.utility_ess'), path: '/solutions/utility-ess-solution' }
   ];
 
   return (
@@ -31,8 +34,7 @@ const Footer = () => {
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Leading the renewable energy revolution with innovative solar solutions, 
-              energy storage systems, and smart grid technologies for a sustainable future.
+              {t('company.description')}
             </p>
 
             {/* Contact Info */}
@@ -54,7 +56,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('quick_links.title')}</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -71,7 +73,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('services.title')}</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
@@ -91,23 +93,23 @@ const Footer = () => {
         <div className="border-t border-gray-700 py-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+              <h3 className="text-2xl font-bold mb-2">{t('newsletter.title')}</h3>
               <p className="text-gray-300">
-                Subscribe to our newsletter for the latest renewable energy insights and updates.
+                {t('newsletter.subtitle')}
               </p>
             </div>
             
             <form className="flex gap-4">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t('newsletter.placeholder')}
                 className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-teal focus:border-transparent"
               />
               <button
                 type="submit"
                 className="bg-teal hover:bg-teal/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
-                Subscribe
+                {t('newsletter.button')}
               </button>
             </form>
           </div>
@@ -118,24 +120,19 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <p className="text-gray-400 text-sm">
-              © 2025 EcoFlow Energy. All rights reserved. | Privacy Policy | Terms of Service
+              {t('copyright')}
             </p>
 
             {/* Social Media */}
             <div className="flex items-center space-x-4">
-              <span className="text-gray-400 text-sm mr-2">Follow us:</span>
-              <a href="#" className="text-gray-400 hover:text-teal transition-colors">
+              <span className="text-gray-400 text-sm mr-2">{t('follow_us')}</span>
+              <a href="https://www.facebook.com/thadorobot" className="text-gray-400 hover:text-teal transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-teal transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="https://www.youtube.com/@thadorobot" className="text-gray-400 hover:text-teal transition-colors">
+                <Youtube className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-teal transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-teal transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
+             
             </div>
           </div>
         </div>

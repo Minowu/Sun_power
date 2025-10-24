@@ -1,0 +1,30 @@
+{
+  "company": {
+    "description": "Dẫn đầu cuộc cách mạng năng lượng tái tạo với các giải pháp năng lượng mặt trời sáng tạo, hệ thống lưu trữ năng lượng và công nghệ lưới điện thông minh cho một tương lai bền vững."
+  },
+  "quick_links": {
+    "title": "Liên Kết Nhanh",
+    "solutions": "Giải Pháp",
+    "products": "Sản Phẩm", 
+    "about": "Về Chúng Tôi",
+    "contact": "Liên Hệ"
+  },
+  "services": {
+    "title": "Dịch Vụ",
+    "residential_string": "Giải Pháp PV Inverter String Dân Cư",
+    "residential_ess": "Giải Pháp ESS Dân Cư",
+    "microinverter": "Giải Pháp Microinverter",
+    "ci_pv": "Giải Pháp PV C&I",
+    "ci_ess": "Giải Pháp ESS C&I",
+    "utility_pv": "Hệ Thống PV Tiện Ích",
+    "utility_ess": "Giải Pháp ESS Tiện Ích"
+  },
+  "newsletter": {
+    "title": "Cập Nhật Tin Tức",
+    "subtitle": "Đăng ký nhận bản tin của chúng tôi để nhận những thông tin mới nhất về năng lượng tái tạo và cập nhật.",
+    "placeholder": "Nhập email của bạn",
+    "button": "Đăng Ký"
+  },
+  "copyright": "© 2025 ThadoEnergy. Tất cả quyền được bảo lưu. | Chính Sách Bảo Mật | Điều Khoản Dịch Vụ",
+  "follow_us": "Theo dõi chúng tôi:"
+}

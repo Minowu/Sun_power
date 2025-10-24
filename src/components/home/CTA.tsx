@@ -1,8 +1,11 @@
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import CTAImage from '../../assets/CTA.png';
 
 const CallToAction = () => {
+  const { t } = useTranslation('home');
+  
   return (
     <section className="relative w-full bg-cover h-[400px] text-white py-20 md:py-32 overflow-hidden">
       {/* Background Image */}
@@ -21,17 +24,17 @@ const CallToAction = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Let's Connect
+            {t('cta.title')}
           </h2>
           <p className="text-lg md:text-xl max-w-4xl mx-auto mb-10 leading-relaxed">
-            Let's create something great together.
+            {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact"
               className="group bg-teal hover:bg-teal/90 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
             >
-              <span>Liên hệ ngay</span>
+              <span>{t('cta.button')}</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

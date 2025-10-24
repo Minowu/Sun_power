@@ -1,0 +1,11 @@
+{
+  "home": "Home",
+  "products": "Products",
+  "solutions": "Solutions",
+  "about": "About Us",
+  "contact": "Contact",
+  "language": {
+    "switch": "Switch to Tiếng Việt",
+    "current": "EN"
+  }
+}

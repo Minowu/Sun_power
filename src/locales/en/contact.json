@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "title": "Contact",
+    "subtitle": "We are ready to support and advise you"
+  },
+  "form": {
+    "title": "Send Message",
+    "description": "Fill in the information below and we will contact you as soon as possible.",
+    "success": {
+      "title": "Thank you!",
+      "message": "Message sent successfully. We will contact you as soon as possible."
+    },
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Select subject",
+        "options": {
+          "consultation": "System Consultation",
+          "quotation": "Quotation",
+          "installation": "Installation",
+          "maintenance": "Maintenance",
+          "other": "Other"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your message..."
+      }
+    },
+    "submit": "Send Message"
+  },
+  "map": {
+    "title": "Map will be displayed here"
+  },
+  "services": {
+    "title": "Our Services",
+    "list": [
+      "Solar system consultation",
+      "Survey and design",
+      "Professional installation",
+      "Maintenance and repair",
+      "24/7 technical support"
+    ]
+  }
+}
