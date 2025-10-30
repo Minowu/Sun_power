@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero';

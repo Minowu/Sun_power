@@ -93,7 +93,7 @@ const Products = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 50}%)` }}
             >
-              {products.map((product, index) => (
+              {products.map((product) => (
                 <div 
                   key={product.id}
                   className="w-1/2 md:w-1/3 flex-shrink-0 px-4"

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Users, Target, Award, Globe } from 'lucide-react';
+import { Users, Target, Award} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero';
 import aboutHero from '../assets/about_hero.jpg';
@@ -106,7 +106,7 @@ const About = () => {
       </section>
       {/* Values Section */}
       <section className="pt-20">
-        <div className="mx-auto px-4">
+        <div className="mx-auto px-4 max-md:px-0 max-md:pb-5">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
