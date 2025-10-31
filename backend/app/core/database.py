@@ -22,15 +22,13 @@ def build_engine():
             db_url = f"{db_url}{sep}sslmode=require"
         return create_engine(db_url, pool_pre_ping=True)
 
-    # Fallback MSSQL (local legacy)
+    # Fallback MSSQL (python-tds, không cần ODBC)
     host = os.getenv('HOST')
-    port = os.getenv('PORT')
+    port = os.getenv('PORT') or '1433'
     database = os.getenv('DATABASE')
     user = os.getenv('USER')
-    password = os.getenv('PASSWORD')
-    mssql_url = (
-        f"mssql+pyodbc://{user}:{password}@{host}:{port}/{database}?driver=ODBC+Driver+17+for+SQL+Server"
-    )
+    password = os.getenv('PASSWORD')  # Nên URL-encode nếu có ký tự đặc biệt
+    mssql_url = f"mssql+pytds://{user}:{password}@{host}:{port}/{database}?charset=utf8"
     return create_engine(mssql_url, pool_pre_ping=True)
 
 
