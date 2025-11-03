@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Clean Energy",
+    "subtitle": "Sustainable Future",
+    "cta": "Explore Solutions"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Leading the renewable energy revolution with innovative solar solutions"
+  },
+  "solution_categories": {
+    "title": "Solutions",
+    "residential": "Residential System",
+    "commercial": "Commercial System",
+    "utility": "Utility-Scale System"
+  },
+  "detailed_solutions": {
+    "residential_string_inverter_pv_solution": {
+      "title": "Residential String Inverter PV Solution",
+      "description": "High-efficiency string inverter system for residential rooftop installations"
+    },
+    "residential_ess_solution": {
+      "title": "Residential ESS Solution",
+      "description": "Advanced energy storage system for home backup and self-consumption"
+    },
+    "microinverter_solution": {
+      "title": "Microinverter Solution",
+      "description": "Module-level power optimization for maximum energy harvest and safety"
+    },
+    "ci_pv_solution": {
+      "title": "C&I PV Solution",
+      "description": "Scalable photovoltaic systems for commercial and industrial facilities"
+    },
+    "ci_ess_solution": {
+      "title": "C&I ESS Solution",
+      "description": "Large-scale energy storage for peak shaving and demand response"
+    },
+    "utility_pv_system": {
+      "title": "Utility PV System",
+      "description": "Megawatt-scale solar farms for utility grid integration"
+    },
+    "utility_ess_solution": {
+      "title": "Utility ESS Solution",
+      "description": "Grid-scale battery storage for renewable energy stabilization"
+    }
+  },
+  "stats": {
+    "projects": "Completed Projects",
+    "clients": "Trusted Clients",
+    "experience": "Years Experience",
+    "support": "Customer Support"
+  },
+  "cta": {
+    "title": "Let's Connect",
+    "subtitle": "Let's create something great together.",
+    "button": "Contact Now"
+  },
+  "quality": {
+    "title": "Quality Control",
+    "subtitle": "Product Quality Creates Trust",
+    "description": "Integrity and reliability are the lifeblood of enterprise development, and winning with quality is the secret of Trinasolar to become the world's leading photovoltaic product manufacturer and solution provider.",
+    "button": "Learn More",
+    "services": {
+      "control": {
+        "title": "Strict quality control",
+        "description": "We ensure that all products meet the highest quality standards to ensure reliability and safety."
+      },
+      "assurance": {
+        "title": "Industry-leading quality assurance",
+        "description": "Our quality assurance processes are designed to meet the most stringent industry requirements."
+      },
+      "testing": {
+        "title": "World-class testing laboratories",
+        "description": "Our testing laboratories are equipped with the latest technology to ensure accurate and reliable results."
+      },
+      "digitalization": {
+        "title": "Digitalization of Total Quality Management",
+        "description": "We have implemented digital tools to streamline our quality management processes and improve efficiency."
+      }
+    }
+  }
+}

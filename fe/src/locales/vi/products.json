@@ -1,0 +1,398 @@
+{
+  "hero": {
+    "title": "Sản Phẩm",
+    "subtitle": "Khám phá các sản phẩm năng lượng mặt trời chất lượng cao"
+  },
+  "categories": {
+    "inverter": "Inverter",
+    "energy_storage": "Hệ Thống Lưu Trữ",
+    "accessories": "Phụ Kiện",
+    "smart_energy_platform": "Nền Tảng Năng Lượng Thông Minh"
+  },
+  "subcategories": {
+    "hybrid": "Hybrid Inverter",
+    "microinverter": "Microinverter", 
+    "string": "String Inverter",
+    "batteries": "Pin Lưu Trữ",
+    "all_in_one": "All-in-one ESS",
+    "ci_ess": "C&I ESS",
+    "container": "Container ESS",
+    "controllers": "Bộ Điều Khiển",
+    "loggers": "Thiết Bị Ghi Dữ Liệu",
+    "communication": "Hệ Thống Truyền Thông",
+    "cloud_platform": "Nền Tảng Đám Mây"
+  },
+  "messages": {
+    "no_products": "Không tìm thấy sản phẩm nào",
+    "try_other_category": "Vui lòng thử chọn danh mục khác"
+  },
+  "products": {
+    "h3k-3k6-5k-6k-hs1": {
+      "name": "H3K/3K6/5K/6K-HS1",
+      "description": "Inverter Hybrid Một Pha"
+    },
+    "h3k-3k6-4k-4k6-5k-6k-8k-hs": {
+      "name": "H3K/3K6/4K/4K6/5K/6K/8K-HS", 
+      "description": "Inverter Hybrid Một Pha"
+    },
+    "h5k-6k-8k-10k-12k-ht": {
+      "name": "H5K/6K/8K/10K/12K-HT",
+      "description": "Inverter Hybrid Ba Pha"
+    },
+    "h15k-20k-25k-ht": {
+      "name": "H15K/20K/25K-HT",
+      "description": "Inverter Hybrid Ba Pha"
+    },
+    "h50k-75k-80k-99k9-100k-110k-125k-et": {
+      "name": "H50K/75K/80K/99K9/100K/110K/125K-ET",
+      "description": "Inverter Hybrid Ba Pha"
+    },
+    "m300-400-500-s-sw": {
+      "name": "M300/400/500-S-SW",
+      "description": "Microinverter"
+    },
+    "m600-700-800-900-1000-s-sw": {
+      "name": "M600/700/800/900/1000-S-SW",
+      "description": "Microinverter"
+    },
+    "m1600-1800-2000-s-sw": {
+      "name": "M1600/1800/2000-S-SW",
+      "description": "Microinverter"
+    },
+    "s2k-3k-3k3-3k6-4k-4k6-5k-6k-s1": {
+      "name": "S2K/3K/3K3/3K6/4K/4K6/5K/6K-S1",
+      "description": "String Inverter"
+    },
+    "s3k-3k6-4k-4k6-5k-6k-7k5-s": {
+      "name": "S3K/3K6/4K/4K6/5K/6K/7K5-S",
+      "description": "String Inverter"
+    },
+    "s7k-8k-9k-10k-12k-s": {
+      "name": "S7K/8K/9K/10K/12K-S",
+      "description": "String Inverter"
+    },
+    "s8k-10k-12k-t": {
+      "name": "S8K/10K/12K-T",
+      "description": "String Inverter"
+    },
+    "e50-100-h3": {
+      "name": "E50/100-H3",
+      "description": "Pin Lưu Trữ"
+    },
+    "e50-100-150-200-250-300-400-500-h2": {
+      "name": "E50/100/150/200/250/300/400/500-H2",
+      "description": "Pin Lưu Trữ"
+    },
+    "e50-100-150-200-h": {
+      "name": "E50/100/150/200-H",
+      "description": "Pin Lưu Trữ"
+    },
+    "h6k-9k-12k-15k-hta": {
+      "name": "H6K/9K/12K/15K-HTA",
+      "description": "All-in-one ESS"
+    },
+    "50-125kw-215kwh": {
+      "name": "50-125KW-215KWH",
+      "description": "C&I ESS"
+    },
+    "ef215p2-m-ms": {
+      "name": "EF215P2-M-MS",
+      "description": "C&I ESS"
+    },
+    "el3000-4000-5000p2-dc": {
+      "name": "EL3000/4000/5000P2-DC",
+      "description": "Container ESS"
+    },
+    "h512k-ht": {
+      "name": "H512K-HT",
+      "description": "Inverter Hybrid Ba Pha"
+    },
+    "h1525k-ht": {
+      "name": "H1525K-HT",
+      "description": "Inverter Hybrid Ba Pha"
+    },
+    "h50k": {
+      "name": "H50K",
+      "description": "Inverter Hybrid Ba Pha"
+    },
+    "m300-500s-sw": {
+      "name": "M300/500S-SW",
+      "description": "Microinverter"
+    },
+    "m600-1000s-sw": {
+      "name": "M600/1000S-SW",
+      "description": "Microinverter"
+    },
+    "m1600-2000s-sw": {
+      "name": "M1600/2000S-SW",
+      "description": "Microinverter"
+    },
+    "s2k-6k-s1": {
+      "name": "S2K/6K-S1",
+      "description": "String Inverter"
+    },
+    "s36k-s": {
+      "name": "S36K-S",
+      "description": "String Inverter"
+    },
+    "s712k-s": {
+      "name": "S712K-S",
+      "description": "String Inverter"
+    },
+    "s812k-t": {
+      "name": "S812K-T",
+      "description": "String Inverter"
+    },
+    "ms-2500": {
+      "name": "MS-2500",
+      "description": "Pin Lưu Trữ"
+    },
+    "e100-h3": {
+      "name": "E100-H3",
+      "description": "Pin Lưu Trữ"
+    },
+    "battery-h": {
+      "name": "Battery-H",
+      "description": "Pin Lưu Trữ"
+    },
+    "battery-h2": {
+      "name": "Battery-H2",
+      "description": "Pin Lưu Trữ"
+    },
+    "h6k-hta": {
+      "name": "H6K-HTA",
+      "description": "All-in-one ESS"
+    },
+    "ci-ess-125kw": {
+      "name": "CI-ESS-125KW",
+      "description": "C&I ESS"
+    },
+    "ef215p2-ms": {
+      "name": "EF215P2-MS",
+      "description": "C&I ESS"
+    },
+    "ef215p2-s": {
+      "name": "EF215P2-S",
+      "description": "C&I ESS"
+    },
+    "el372-418p2-dc": {
+      "name": "EL372/418P2-DC",
+      "description": "C&I ESS"
+    },
+    "el3000-5000p2-dc": {
+      "name": "EL3000/5000P2-DC",
+      "description": "Container ESS"
+    },
+    "smart-ecs": {
+      "name": "Smart ECS",
+      "description": "Bộ Điều Khiển"
+    },
+    "hyxilogger": {
+      "name": "HyxiLogger",
+      "description": "Thiết Bị Ghi Dữ Liệu"
+    },
+    "dcs-4g-wl": {
+      "name": "DCS-4G-WL",
+      "description": "Hệ Thống Truyền Thông"
+    },
+    "dmu-4g-w": {
+      "name": "DMU-4G-W",
+      "description": "Hệ Thống Truyền Thông"
+    },
+    "smart-energy-platform": {
+      "name": "Smart Energy Platform",
+      "description": "Nền Tảng Đám Mây"
+    }
+  },
+  "keyFeatures": {
+    "h3k-3k6-5k-6k-hs1": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h3k-3k6-4k-4k6-5k-6k-8k-hs": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h5k-6k-8k-10k-12k-ht": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h15k-20k-25k-ht": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h50k-75k-80k-99k9-100k-110k-125k-et": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "m300-400-500-s-sw": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "m600-700-800-900-1000-s-sw": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "m1600-1800-2000-s-sw": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "s2k-3k-3k3-3k6-4k-4k6-5k-6k-s1": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "s3k-3k6-4k-4k6-5k-6k-7k5-s": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "s7k-8k-9k-10k-12k-s": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "s8k-10k-12k-t": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "ms-2500": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "e50-100-h3": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "e50-100-150-200-250-300-400-500-h2": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "e50-100-150-200-h": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "h6k-9k-12k-15k-hta": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "50-125kw-215kwh": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "ef215p2-m-ms": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "ef215p2-s": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "el372-418p2-dc": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "el3000-4000-5000p2-dc": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "smart-ecs": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "hyxilogger": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "dcs-4g-wl": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "dmu-4g-w": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ],
+    "smart-energy-platform": [
+      "Hiệu suất cao với công nghệ tiên tiến",
+      "Thiết kế bền bỉ với tuổi thọ dài",
+      "Bảo vệ toàn diện và an toàn tuyệt đối",
+      "Giám sát thông minh 24/7",
+      "Lắp đặt và bảo trì dễ dàng"
+    ]
+  }
+}

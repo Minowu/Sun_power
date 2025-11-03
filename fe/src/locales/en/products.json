@@ -1,0 +1,398 @@
+{
+  "hero": {
+    "title": "Products",
+    "subtitle": "Discover high-quality solar energy products"
+  },
+  "categories": {
+    "inverter": "Inverter",
+    "energy_storage": "Energy Storage",
+    "accessories": "Accessories",
+    "smart_energy_platform": "Smart Energy Platform"
+  },
+  "subcategories": {
+    "hybrid": "Hybrid Inverter",
+    "microinverter": "Microinverter",
+    "string": "String Inverter", 
+    "batteries": "Batteries",
+    "all_in_one": "All-in-one ESS",
+    "ci_ess": "C&I ESS",
+    "container": "Container ESS",
+    "controllers": "Controllers",
+    "loggers": "Data Loggers",
+    "communication": "Communication Systems",
+    "cloud_platform": "Cloud Platform"
+  },
+  "messages": {
+    "no_products": "No products found",
+    "try_other_category": "Please try selecting another category"
+  },
+  "products": {
+    "h3k-3k6-5k-6k-hs1": {
+      "name": "H3K/3K6/5K/6K-HS1",
+      "description": "Single-Phase Hybrid Inverter"
+    },
+    "h3k-3k6-4k-4k6-5k-6k-8k-hs": {
+      "name": "H3K/3K6/4K/4K6/5K/6K/8K-HS",
+      "description": "Single-Phase Hybrid Inverter"
+    },
+    "h5k-6k-8k-10k-12k-ht": {
+      "name": "H5K/6K/8K/10K/12K-HT",
+      "description": "Three-Phase Hybrid Inverter"
+    },
+    "h15k-20k-25k-ht": {
+      "name": "H15K/20K/25K-HT",
+      "description": "Three-Phase Hybrid Inverter"
+    },
+    "h50k-75k-80k-99k9-100k-110k-125k-et": {
+      "name": "H50K/75K/80K/99K9/100K/110K/125K-ET",
+      "description": "Three-Phase Hybrid Inverter"
+    },
+    "m300-400-500-s-sw": {
+      "name": "M300/400/500-S-SW",
+      "description": "Microinverter"
+    },
+    "m600-700-800-900-1000-s-sw": {
+      "name": "M600/700/800/900/1000-S-SW",
+      "description": "Microinverter"
+    },
+    "m1600-1800-2000-s-sw": {
+      "name": "M1600/1800/2000-S-SW",
+      "description": "Microinverter"
+    },
+    "s2k-3k-3k3-3k6-4k-4k6-5k-6k-s1": {
+      "name": "S2K/3K/3K3/3K6/4K/4K6/5K/6K-S1",
+      "description": "String Inverter"
+    },
+    "s3k-3k6-4k-4k6-5k-6k-7k5-s": {
+      "name": "S3K/3K6/4K/4K6/5K/6K/7K5-S",
+      "description": "String Inverter"
+    },
+    "s7k-8k-9k-10k-12k-s": {
+      "name": "S7K/8K/9K/10K/12K-S",
+      "description": "String Inverter"
+    },
+    "s8k-10k-12k-t": {
+      "name": "S8K/10K/12K-T",
+      "description": "String Inverter"
+    },
+    "e50-100-h3": {
+      "name": "E50/100-H3",
+      "description": "Battery Storage"
+    },
+    "e50-100-150-200-250-300-400-500-h2": {
+      "name": "E50/100/150/200/250/300/400/500-H2",
+      "description": "Battery Storage"
+    },
+    "e50-100-150-200-h": {
+      "name": "E50/100/150/200-H",
+      "description": "Battery Storage"
+    },
+    "h6k-9k-12k-15k-hta": {
+      "name": "H6K/9K/12K/15K-HTA",
+      "description": "All-in-one ESS"
+    },
+    "50-125kw-215kwh": {
+      "name": "50-125KW-215KWH",
+      "description": "C&I ESS"
+    },
+    "ef215p2-m-ms": {
+      "name": "EF215P2-M-MS",
+      "description": "C&I ESS"
+    },
+    "el3000-4000-5000p2-dc": {
+      "name": "EL3000/4000/5000P2-DC",
+      "description": "Container ESS"
+    },
+    "h512k-ht": {
+      "name": "H512K-HT",
+      "description": "Three-Phase Hybrid Inverter"
+    },
+    "h1525k-ht": {
+      "name": "H1525K-HT",
+      "description": "Three-Phase Hybrid Inverter"
+    },
+    "h50k": {
+      "name": "H50K",
+      "description": "Three-Phase Hybrid Inverter"
+    },
+    "m300-500s-sw": {
+      "name": "M300/500S-SW",
+      "description": "Microinverter"
+    },
+    "m600-1000s-sw": {
+      "name": "M600/1000S-SW",
+      "description": "Microinverter"
+    },
+    "m1600-2000s-sw": {
+      "name": "M1600/2000S-SW",
+      "description": "Microinverter"
+    },
+    "s2k-6k-s1": {
+      "name": "S2K/6K-S1",
+      "description": "String Inverter"
+    },
+    "s36k-s": {
+      "name": "S36K-S",
+      "description": "String Inverter"
+    },
+    "s712k-s": {
+      "name": "S712K-S",
+      "description": "String Inverter"
+    },
+    "s812k-t": {
+      "name": "S812K-T",
+      "description": "String Inverter"
+    },
+    "ms-2500": {
+      "name": "MS-2500",
+      "description": "Battery Storage"
+    },
+    "e100-h3": {
+      "name": "E100-H3",
+      "description": "Battery Storage"
+    },
+    "battery-h": {
+      "name": "Battery-H",
+      "description": "Battery Storage"
+    },
+    "battery-h2": {
+      "name": "Battery-H2",
+      "description": "Battery Storage"
+    },
+    "h6k-hta": {
+      "name": "H6K-HTA",
+      "description": "All-in-one ESS"
+    },
+    "ci-ess-125kw": {
+      "name": "CI-ESS-125KW",
+      "description": "C&I ESS"
+    },
+    "ef215p2-ms": {
+      "name": "EF215P2-MS",
+      "description": "C&I ESS"
+    },
+    "ef215p2-s": {
+      "name": "EF215P2-S",
+      "description": "C&I ESS"
+    },
+    "el372-418p2-dc": {
+      "name": "EL372/418P2-DC",
+      "description": "C&I ESS"
+    },
+    "el3000-5000p2-dc": {
+      "name": "EL3000/5000P2-DC",
+      "description": "Container ESS"
+    },
+    "smart-ecs": {
+      "name": "Smart ECS",
+      "description": "Controller"
+    },
+    "hyxilogger": {
+      "name": "HyxiLogger",
+      "description": "Data Logger"
+    },
+    "dcs-4g-wl": {
+      "name": "DCS-4G-WL",
+      "description": "Communication System"
+    },
+    "dmu-4g-w": {
+      "name": "DMU-4G-W",
+      "description": "Communication System"
+    },
+    "smart-energy-platform": {
+      "name": "Smart Energy Platform",
+      "description": "Cloud Platform"
+    }
+  },
+  "keyFeatures": {
+    "h3k-3k6-5k-6k-hs1": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h3k-3k6-4k-4k6-5k-6k-8k-hs": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h5k-6k-8k-10k-12k-ht": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h15k-20k-25k-ht": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h50k-75k-80k-99k9-100k-110k-125k-et": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "m300-400-500-s-sw": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "m600-700-800-900-1000-s-sw": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "m1600-1800-2000-s-sw": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "s2k-3k-3k3-3k6-4k-4k6-5k-6k-s1": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "s3k-3k6-4k-4k6-5k-6k-7k5-s": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "s7k-8k-9k-10k-12k-s": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "s8k-10k-12k-t": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "ms-2500": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "e50-100-h3": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "e50-100-150-200-250-300-400-500-h2": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "e50-100-150-200-h": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "h6k-9k-12k-15k-hta": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "50-125kw-215kwh": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "ef215p2-m-ms": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "ef215p2-s": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "el372-418p2-dc": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "el3000-4000-5000p2-dc": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "smart-ecs": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "hyxilogger": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "dcs-4g-wl": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "dmu-4g-w": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ],
+    "smart-energy-platform": [
+      "High efficiency with advanced technology",
+      "Durable design with long lifespan",
+      "Comprehensive protection and absolute safety",
+      "Smart 24/7 monitoring",
+      "Easy installation and maintenance"
+    ]
+  }
+}

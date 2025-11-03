@@ -1,0 +1,115 @@
+import { useParams, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useSolution } from '../hooks/useSolution';
+import PageHero from '../components/PageHero';
+import SolutionOverview from '../components/solution/SolutionOverview';
+import SchemaFramework from '../components/solution/SchemaFramework';
+import FeatureBlock from '../components/solution/FeatureBlock';
+import aboutHero from '../assets/about_hero.jpg';
+
+const SolutionDetail = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const { t } = useTranslation('solutions');
+  const { solution: currentSolution } = useSolution(slug);
+
+  if (!currentSolution) {
+    return (
+      <div className="min-h-screen bg-white">
+        <PageHero 
+          title={t('hero.title')}
+          subtitle={t('hero.subtitle')}
+          backgroundImage={aboutHero}
+        />
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gradient-teal-blue mb-4">{t('notFound.title')}</h1>
+            <p className="text-gray-600 mb-4">{t('notFound.description')}</p>
+            <Link 
+              to="/solutions" 
+              className="bg-teal-500 text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition-colors"
+            >
+              {t('notFound.backButton')}
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-white">
+      <PageHero 
+        title={t(`solutions.${currentSolution.slug}.overview.title`, currentSolution.overview.title)}
+        subtitle={t('hero.subtitle')}
+        backgroundImage={currentSolution.overview.image}
+      />
+
+      {/* Solution Overview */}
+      <SolutionOverview 
+        title={t('overview.title')}
+        description={t(`solutions.${currentSolution.slug}.overview.description`, currentSolution.overview.description)}
+        image={currentSolution.overview.image}
+      />
+
+      {/* Schema Framework */}
+      <SchemaFramework 
+        title={t('schema.title')}
+        gifImage={currentSolution.schema.gifImage}
+      />
+
+      {/* Features Section */}
+      <section className="bg-black w-screen pt-20 rounded-2xl">
+        {/* Feature 1 */}
+        <FeatureBlock 
+          title={t(`solutions.${currentSolution.slug}.features.feature1.title`, currentSolution.feature1.title)}
+          detail1={t(`solutions.${currentSolution.slug}.features.feature1.detail1`, currentSolution.feature1.detail1)}
+          detail2={t(`solutions.${currentSolution.slug}.features.feature1.detail2`, currentSolution.feature1.detail2)}
+          image={currentSolution.feature1.image}
+        />
+
+        {/* Feature 2 */}
+        <FeatureBlock 
+          title={t(`solutions.${currentSolution.slug}.features.feature2.title`, currentSolution.feature2.title)}
+          detail1={t(`solutions.${currentSolution.slug}.features.feature2.detail1`, currentSolution.feature2.detail1)}
+          detail2={t(`solutions.${currentSolution.slug}.features.feature2.detail2`, currentSolution.feature2.detail2)}
+          image={currentSolution.feature2.image}
+        />
+
+        {/* Feature 3 - Tái sử dụng component FeatureBlock */}
+        <FeatureBlock 
+          title={t(`solutions.${currentSolution.slug}.features.feature3.title`, currentSolution.feature3.title)}
+          detail1={t(`solutions.${currentSolution.slug}.features.feature3.detail1`, currentSolution.feature3.detail1)}
+          detail2={t(`solutions.${currentSolution.slug}.features.feature3.detail2`, currentSolution.feature3.detail2)}
+          image={currentSolution.feature3.image}
+        />
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-teal-500 to-blue-600">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {t('cta.title')}
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              {t('cta.description')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-teal-500 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                {t('cta.button')}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default SolutionDetail;

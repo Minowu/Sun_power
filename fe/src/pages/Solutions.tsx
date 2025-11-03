@@ -1,0 +1,79 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useSolutions } from '../hooks/useSolutions';
+import PageHero from '../components/PageHero';
+import solutionHero from '../assets/solution_hero.jpg';
+
+const Solutions = () => {
+  const { t } = useTranslation('solutions');
+  const { solutions: residential } = useSolutions('residential');
+  const { solutions: ci } = useSolutions('ci');
+  const { solutions: utility } = useSolutions('utility');
+  
+  const data = { residential, ci, utility };
+  
+  return (
+    <div className="min-h-screen bg-white">
+      <PageHero 
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
+        backgroundImage={solutionHero}
+      />
+
+      {/* Solutions by Category */}
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          {(['residential', 'ci', 'utility'] as const).map((category, categoryIndex) => {
+            const categorySolutions = data[category];
+            
+            return (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <div className="flex items-center mb-8">
+                  <h2 className="text-3xl font-bold text-navy mr-4">
+                    {t(`categories.${category}`)}
+                  </h2>
+                  <div className="flex-1 h-0.5 bg-teal-500"></div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {categorySolutions.map((solution, index) => (
+                    <motion.div
+                      key={solution.id}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <Link to={`/solutions/${solution.slug}`} className="block">
+                        <div className="bg-white rounded-lg shadow-lg p-6 h-[300px]">
+                          <img 
+                            src={solution.overview.image} 
+                            alt={t(`solutions.${solution.slug}.title`, solution.overview.title)}
+                            className="w-full h-48 object-cover rounded-lg mb-4 img-hover"
+                          />
+                          <h3 className="text-xl font-bold text-navy mb-2">
+                            {t(`solutions.${solution.slug}.title`, solution.overview.title)}
+                          </h3>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Solutions;

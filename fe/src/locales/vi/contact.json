@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "title": "Liên Hệ",
+    "subtitle": "Chúng tôi sẵn sàng hỗ trợ và tư vấn cho bạn"
+  },
+  "form": {
+    "title": "Gửi Tin Nhắn",
+    "description": "Điền thông tin bên dưới và chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.",
+    "success": {
+      "title": "Cảm ơn bạn!",
+      "message": "Tin nhắn đã được gửi thành công. Chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể."
+    },
+    "fields": {
+      "name": {
+        "label": "Họ và tên",
+        "placeholder": "Nhập họ và tên"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Nhập email"
+      },
+      "phone": {
+        "label": "Số điện thoại",
+        "placeholder": "Nhập số điện thoại"
+      },
+      "subject": {
+        "label": "Chủ đề",
+        "placeholder": "Chọn chủ đề",
+        "options": {
+          "consultation": "Tư vấn hệ thống",
+          "quotation": "Báo giá",
+          "installation": "Lắp đặt",
+          "maintenance": "Bảo trì",
+          "other": "Khác"
+        }
+      },
+      "message": {
+        "label": "Tin nhắn",
+        "placeholder": "Nhập tin nhắn của bạn..."
+      }
+    },
+    "submit": "Gửi tin nhắn"
+  },
+  "map": {
+    "title": "Bản đồ sẽ được hiển thị tại đây"
+  },
+  "services": {
+    "title": "Dịch Vụ Của Chúng Tôi",
+    "list": [
+      "Tư vấn hệ thống điện mặt trời",
+      "Khảo sát và thiết kế",
+      "Lắp đặt chuyên nghiệp",
+      "Bảo trì và sửa chữa",
+      "Hỗ trợ kỹ thuật 24/7"
+    ]
+  }
+}

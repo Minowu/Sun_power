@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  font-family: "SohoGothicPro-Light", Arial, "Source Han Sans CN", "noto sans", "microsoft yahei", Helvetica, sans-serif;
+  scroll-snap-type: y proximity;
+}
+
+footer {
+  scroll-snap-align: center;
+}
+
+@theme {
+  --color-teal: #1C9B9B;
+  --color-yellow: #F4B400;
+  --color-navy: #2E3A59;
+  --color-neutral: #F5F7FA;
+  --color-success: #4CAF50;
+  
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+}
+@layer components {
+  @layer components {
+  /* Áp dụng các style cơ bản cho chính button */
+  .btn-nav {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  /* Dùng bộ chọn CSS '::after' để style cho pseudo-element */
+  .btn-nav::after {
+    @apply content-[''] absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-teal transition-all duration-300;
+  }
+
+  /* Dùng bộ chọn CSS ':hover::after' để style khi hover */
+  .btn-nav:hover::after {
+    @apply w-full;
+  }
+
+  /* Class chung cho hiệu ứng hover image */
+  .img-hover {
+    @apply hover:scale-120 transition-all duration-300;
+  }
+
+  /* Class cho hiệu ứng gradient text */
+  .text-gradient-teal-blue {
+    @apply bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent;
+  }
+}
+}
+/* Animations */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandFromCenter {
+  0% {
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+}

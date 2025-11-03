@@ -1,0 +1,30 @@
+{
+  "company": {
+    "description": "Leading the renewable energy revolution with innovative solar solutions, energy storage systems, and smart grid technologies for a sustainable future."
+  },
+  "quick_links": {
+    "title": "Quick Links",
+    "solutions": "Solutions",
+    "products": "Products",
+    "about": "About Us", 
+    "contact": "Contact"
+  },
+  "services": {
+    "title": "Services",
+    "residential_string": "Residential String Inverter PV Solution",
+    "residential_ess": "Residential ESS Solution",
+    "microinverter": "Microinverter Solution",
+    "ci_pv": "C&I PV Solution",
+    "ci_ess": "C&I ESS Solution",
+    "utility_pv": "Utility PV System",
+    "utility_ess": "Utility ESS Solution"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "subtitle": "Subscribe to our newsletter for the latest renewable energy insights and updates.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
+  },
+  "copyright": "© 2025 ThadoEnergy. All rights reserved. | Privacy Policy | Terms of Service",
+  "follow_us": "Follow us:"
+}

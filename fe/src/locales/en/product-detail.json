@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Product",
+    "subtitle": "Discover high-quality solar energy products"
+  },
+  "notFound": {
+    "title": "Product Not Found",
+    "description": "Please check the URL and try again",
+    "backButton": "Back to Products"
+  },
+  "overview": {
+    "keyFeaturesLabel": "Key Features",
+    "datasheetLabel": "Datasheet"
+  },
+  "content": {
+    "productFeaturesLabel": "Product Features",
+    "technicalSpecsLabel": "Technical Specifications",
+    "productDetailAlt": "Product Detail",
+    "productFeaturesAlt": "Product Features"
+  },
+  "cta": {
+    "title": "Interested in This Product?",
+    "description": "Contact us now for detailed consultation and best pricing",
+    "button": "Contact for Consultation"
+  }
+}
